@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-titanium-50 text-slate-900;
+  }
+
+  /* Removes the default blue tap highlight on mobile Chrome/Safari */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent iOS Safari from zooming in when tapping inputs */
+  input[type="text"],
+  input[type="number"],
+  input[type="range"] {
+    font-size: 16px;
+  }
+}
+
+/* ─── Custom Range Slider ─────────────────────────────────────────────────── */
+
+/* Track */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  @apply bg-slate-200 rounded-full outline-none;
+}
+
+/* Thumb – Webkit (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  @apply bg-enterprise-blue rounded-full shadow-enterprise-glow cursor-pointer transition-transform;
+  border: 2px solid white;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Thumb – Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  @apply bg-enterprise-blue shadow-enterprise-glow cursor-pointer;
+}
+
+/* ─── Smooth section fade-in utility ─────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* ─── WhatsApp float pulse ────────────────────────────────────────────────── */
+@keyframes whatsapp-ping {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsapp-ping 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
