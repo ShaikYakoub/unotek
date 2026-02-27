@@ -3,7 +3,14 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { MessageSquare, ArrowDown, CheckCircle2, Wind, Shield, Zap } from "lucide-react";
+import {
+  MessageSquare,
+  ArrowDown,
+  CheckCircle2,
+  Wind,
+  Shield,
+  Zap,
+} from "lucide-react";
 import EnterpriseEstimationEngine from "./components/EnterpriseEstimationEngine";
 import AdvancedEstimationEngine from "./components/AdvancedEstimationEngine";
 import AnatomyOfBlock from "./components/AnatomyOfBlock";
@@ -179,26 +186,31 @@ export default function PremiumAACWebsite() {
           {[
             {
               icon: Wind,
-              title: '66% Lighter',
-              desc: 'Massive reduction in foundation dead load vs red clay brick.',
+              title: "66% Lighter",
+              desc: "Massive reduction in foundation dead load vs red clay brick.",
             },
             {
               icon: Shield,
-              title: 'Ultimate Fire Safety',
-              desc: 'Highest fire-resistance ratings per inch — zero combustion.',
+              title: "Ultimate Fire Safety",
+              desc: "Highest fire-resistance ratings per inch — zero combustion.",
             },
             {
               icon: Zap,
-              title: 'Thermal Efficiency',
-              desc: 'Drastically reduces HVAC tonnage and lifetime operational costs.',
+              title: "Thermal Efficiency",
+              desc: "Drastically reduces HVAC tonnage and lifetime operational costs.",
             },
           ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="flex flex-col items-center pt-6 md:pt-0 px-6">
+            <div
+              key={title}
+              className="flex flex-col items-center pt-6 md:pt-0 px-6"
+            >
               <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-4">
                 <Icon className="w-7 h-7 text-blue-500" strokeWidth={1.5} />
               </div>
               <h3 className="font-bold text-slate-900 text-lg mb-1">{title}</h3>
-              <p className="text-sm text-slate-500 font-light leading-relaxed">{desc}</p>
+              <p className="text-sm text-slate-500 font-light leading-relaxed">
+                {desc}
+              </p>
             </div>
           ))}
         </div>
@@ -434,10 +446,30 @@ export default function PremiumAACWebsite() {
             </p>
           </div>
           <div className="flex flex-col xs:flex-row gap-6 items-center">
-            <a href="#process" className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors">Manufacturing</a>
-            <a href="#anatomy" className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors">Anatomy</a>
-            <a href="#projects" className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors">Projects</a>
-            <a href="#calculator" className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors">Calculator</a>
+            <a
+              href="#process"
+              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
+            >
+              Manufacturing
+            </a>
+            <a
+              href="#anatomy"
+              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
+            >
+              Anatomy
+            </a>
+            <a
+              href="#projects"
+              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
+            >
+              Projects
+            </a>
+            <a
+              href="#calculator"
+              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
+            >
+              Calculator
+            </a>
             <a
               href={whatsappBase}
               target="_blank"

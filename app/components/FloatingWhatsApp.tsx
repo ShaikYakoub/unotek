@@ -21,12 +21,22 @@ export default function FloatingWhatsApp({
     return () => clearTimeout(t);
   }, []);
 
-  // Auto-show tooltip prompt after 6 s if not dismissed
+  // Show tooltip after 6s
   useEffect(() => {
     if (!visible || dismissed) return;
-    const t = setTimeout(() => setTooltipOpen(true), 6000);
-    return () => clearTimeout(t);
+    const showTimer = setTimeout(() => setTooltipOpen(true), 6000);
+    return () => clearTimeout(showTimer);
   }, [visible, dismissed]);
+
+  // Hide tooltip after 5s of being open
+  useEffect(() => {
+    if (!tooltipOpen) return;
+    const hideTimer = setTimeout(() => {
+      setTooltipOpen(false);
+      setDismissed(true);
+    }, 5000);
+    return () => clearTimeout(hideTimer);
+  }, [tooltipOpen]);
 
   return (
     <AnimatePresence>
