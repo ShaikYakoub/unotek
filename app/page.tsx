@@ -82,7 +82,7 @@ export default function PremiumAACWebsite() {
 
   return (
     <div className="font-sans text-slate-900 bg-[#F8F9FA] min-h-screen selection:bg-blue-200">
-      <Navbar whatsappLink={whatsappBase} />
+      <Navbar />
       {/* ─── HERO ────────────────────────────────────────────────────────────── */}
       <section
         ref={heroRef}
