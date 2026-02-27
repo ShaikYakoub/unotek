@@ -1,229 +1,206 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  TrendingDown,
-  ShieldAlert,
-  Activity,
-  Maximize,
-  Clock,
-  BugOff,
-  CheckCircle2,
-} from "lucide-react";
-import Navbar from "../components/Navbar";
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { 
+  Flame, Shield, TrendingDown, Clock, Move, BugOff
+} from 'lucide-react';
 
-export default function AdvantagesPage() {
-  const whatsappNumber = "919876543210";
-
-  const savingsData = [
-    {
-      metric: "25%",
-      title: "Foundation Load",
-      desc: "Massive reduction in overall structural dead load. [cite: 36]",
-    },
-    {
-      metric: "15%",
-      title: "Steel Usage",
-      desc: "Significant drop in required steel reinforcement. [cite: 37]",
-    },
-    {
-      metric: "10%",
-      title: "Cement Usage",
-      desc: "Lower mortar requirements due to uniform block sizes. [cite: 38]",
-    },
-    {
-      metric: "35%",
-      title: "Plastering & Labour",
-      desc: "Smooth finishes require less plaster and fewer man-hours. [cite: 39]",
-    },
-  ];
+export default function PremiumAdvantagesPage() {
+  const whatsappNumber = "YOUR_CLIENT_NUMBER"; 
+  const containerRef = useRef(null);
 
   return (
-    <>
-      <Navbar />
-      {/* --- HERO: THE 66% ADVANTAGE --- */}
+    <div className="font-sans text-slate-900 bg-white min-h-screen pt-24 pb-20">
+      
+      {/* --- HERO: THE MATERIAL REVOLUTION --- */}
       <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4 block">
-            Structural Superiority
+            The Competitive Edge
           </span>
-          <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
-            66% Lighter. <br />
-            <span className="text-slate-400">Exponentially Stronger.</span>
+          <h1 className="text-5xl md:text-8xl font-black text-slate-900 mb-6 tracking-tight">
+            Outperform. <br />
+            <span className="text-slate-300">Outlast.</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto font-light leading-relaxed">
-            AAC Blocks make construction highly economical [cite: 35]. Being
-            about 66% lighter than conventional clay bricks ensures guaranteed,
-            measurable savings across every phase of your project [cite: 35].
+            [cite_start]AAC Blocks make construction highly economical, being about 66% lighter than conventional clay bricks[cite: 35]. Discover the assured structural savings.
           </p>
         </motion.div>
       </section>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 divide-x-0 md:divide-x divide-slate-200">
-          {savingsData.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-center text-center md:px-6"
-            >
-              <h3 className="text-5xl md:text-6xl font-black text-blue-600 mb-4">
-                {item.metric}
-              </h3>
-              <p className="text-lg font-bold text-slate-900 uppercase tracking-wide">
-                {item.title}
-              </p>
-              <p className="text-sm text-slate-500 mt-2 font-light">
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* --- COMPREHENSIVE ARCHITECTURAL BENEFITS --- */}
-      <section className="py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-black tracking-tight mb-4">
-              Engineered for Perfection.
+      {/* --- STICKY SCROLL-JACKING: AAC VS RED CLAY --- */}
+      <section className="relative px-6 md:px-12 max-w-7xl mx-auto py-24" ref={containerRef}>
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          
+          {/* Left Column: Pinned Context */}
+          <div className="lg:w-1/3 lg:sticky lg:top-32 space-y-6 z-10">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+              The End of <br/> Conventional <br/> <span className="text-blue-600">Clay Bricks.</span>
             </h2>
-            <p className="text-xl text-slate-500 font-light max-w-2xl mx-auto">
-              Beyond pure cost reduction, LEOCON AAC blocks elevate the inherent
-              safety, comfort, and usable space of your developments.
+            <p className="text-lg text-slate-500 font-light leading-relaxed">
+              Every cubic meter of traditional material you replace with LEOCON AAC exponentially decreases your structural dead load while drastically accelerating your project timeline.
             </p>
+            <div className="hidden lg:block w-24 h-1 bg-blue-600 mt-8"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-            {/* Fire & Acoustics */}
-            <div className="flex flex-col">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
-                <ShieldAlert size={28} />
+          {/* Right Column: Scrolling Proofs */}
+          <div className="lg:w-2/3 space-y-32">
+            
+            {/* Proof 1: Weight & Foundation */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl"
+            >
+              <div className="relative h-64 w-full bg-slate-200 rounded-2xl overflow-hidden mb-8">
+                {/* 🎬 Video Prompt: Scale tipping heavily under red bricks vs balancing lightly with AAC (6s loop) */}
+                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                  <source src="/path-to-scale-video.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-slate-900 shadow-sm">
+                  66% Lighter
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Fire & Acoustics Resistant
-              </h3>
-              <p className="text-slate-600 font-light leading-relaxed mb-4">
-                [cite_start]AAC Blocks have the highest hourly fire-resistant
-                ratings per inch of any building material[cite: 45].
-                [cite_start]It will not burn[cite: 46].
+              <h3 className="text-3xl font-black text-slate-900 mb-4">Foundation Load Slashed.</h3>
+              <p className="text-lg text-slate-600 font-light mb-6">
+                [cite_start]Because it is 2.5 times lighter than conventional bricks, utilizing AAC results in an immediate 25% reduction in overall foundation load[cite: 16, 36].
               </p>
-              <p className="text-slate-600 font-light leading-relaxed">
-                [cite_start]It has excellent thermal and acoustic insulation,
-                making it best suited for air-conditioned and fire-rated
-                buildings[cite: 46].
-              </p>
-            </div>
-            {/* Earthquake Resistance */}
-            <div className="flex flex-col">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
-                <Activity size={28} />
+              <div className="flex gap-8 border-t border-slate-200 pt-6">
+                <div>
+                  <p className="text-3xl font-black text-blue-600 mb-1">15%</p>
+                  [cite_start]<p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Less Steel Usage [cite: 37]</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-black text-blue-600 mb-1">10%</p>
+                  [cite_start]<p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Less Cement [cite: 38]</p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Earthquake Resistant
-              </h3>
-              <p className="text-slate-600 font-light leading-relaxed">
-                [cite_start]The impact of earthquake forces on a structure is
-                proportional to the weight of the structure[cite: 48].
-                [cite_start]Because AAC is exceptionally lightweight, it
-                provides excellent resistance to earthquake forces[cite: 49].
-              </p>
-            </div>
-            {/* Carpet Area */}
-            <div className="flex flex-col">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
-                <Maximize size={28} />
+            </motion.div>
+
+            {/* Proof 2: Fire & Acoustics */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl"
+            >
+              <div className="relative h-64 w-full bg-slate-200 rounded-2xl overflow-hidden mb-8">
+                 {/* 🎬 Video Prompt: Split-screen: left side shows a raging orange fire; right side shows a pristine AAC block wall completely unaffected (6s loop) */}
+                 <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                  <source src="/path-to-fire-video.mp4" type="video/mp4" />
+                </video>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Enhances Carpet Area
-              </h3>
-              <p className="text-slate-600 font-light leading-relaxed">
-                [cite_start]AAC Blocks achieve higher wall strength in thinner
-                walls than conventional bricks achieve in thick walls[cite: 55].
-                [cite_start]This directly results in an increase in usable
-                carpet area on every single floor of your project[cite: 56].
+              <h3 className="text-3xl font-black text-slate-900 mb-4">Ultimate Safety Ratings.</h3>
+              <p className="text-lg text-slate-600 font-light mb-6">
+                [cite_start]AAC Blocks possess the highest hourly fire-resistant ratings per inch of any building material[cite: 46]. It simply will not burn. [cite_start]Additionally, its porous nature provides excellent thermal and acoustic insulation[cite: 46].
               </p>
-            </div>
-            {/* Time Saving & Uniformity */}
-            <div className="flex flex-col">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
-                <Clock size={28} />
+            </motion.div>
+
+            {/* Proof 3: Speed & Labor */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                  <Clock size={32} />
+                </div>
+                <h3 className="text-3xl font-black text-slate-900">Rapid Deployment.</h3>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Rapid Construction
-              </h3>
-              <p className="text-slate-600 font-light leading-relaxed mb-4">
-                [cite_start]AAC Blocks are lightweight, dry, and set quickly,
-                making them a faster option over conventional clay bricks[cite:
-                40, 41]. [cite_start]As a result, builders are able to finish
-                projects faster than estimated[cite: 42].
+              <p className="text-lg text-slate-600 font-light mb-6">
+                [cite_start]AAC Blocks are dry and set quickly, making them a dramatically faster option[cite: 41]. [cite_start]Because they come in pre-defined sizes and constant dimensions, builders minimize the time required to adjust them[cite: 44].
               </p>
-              <p className="text-slate-600 font-light leading-relaxed">
-                [cite_start]They come in pre-defined sizes and constant
-                dimensions, which minimizes the time spent adjusting them[cite:
-                43, 44].
-              </p>
-            </div>
-            {/* Pest Resistant */}
-            <div className="flex flex-col">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
-                <BugOff size={28} />
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm inline-block">
+                <p className="text-4xl font-black text-blue-600 mb-1">35%</p>
+                [cite_start]<p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Reduction in plastering & labour cost [cite: 39]</p>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Pest Resistant
-              </h3>
-              <p className="text-slate-600 font-light leading-relaxed">
-                [cite_start]AAC Blocks are made up of completely inorganic
-                materials, which do not get disintegrated[cite: 52, 53].
-                [cite_start]They are not susceptible to external influences and
-                keep termites away, entirely avoiding pest damage and
-                losses[cite: 53].
-              </p>
-            </div>
-            {/* Less Breakage */}
-            <div className="flex flex-col">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
-                <TrendingDown size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Negligible Breakage
-              </h3>
-              <p className="text-slate-600 font-light leading-relaxed">
-                [cite_start]AAC Blocks have negligible breakage and drastically
-                reduce wastage on the construction site, resulting in
-                significantly increased utilization compared to traditional red
-                clay bricks[cite: 50, 51].
-              </p>
-            </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
 
-      {/* --- ENTERPRISE CTA --- */}
-      <section className="py-24 bg-slate-100 text-center px-6 md:px-12">
+      {/* --- THE X-RAY BLOCK ANATOMY --- */}
+      <section className="py-32 bg-slate-900 text-white overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16">
+          
+          <div className="md:w-1/2 relative group cursor-crosshair">
+            <h3 className="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Hover to Inspect Structure</h3>
+            
+            {/* The interactive block image container */}
+            <div className="relative w-full aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
+              
+              
+              {/* Overlay that reveals the "inner porous structure" on hover (CSS magic) */}
+              <div className="absolute inset-0 bg-slate-900 opacity-60 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"></div>
+              
+              {/* Data points that appear on hover */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none">
+                <div className="bg-slate-900/80 backdrop-blur-sm p-4 rounded-xl border border-slate-700 text-center mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                  <BugOff className="text-blue-400 mx-auto mb-2" size={24} />
+                  <p className="font-bold">Termite Free</p>
+                  [cite_start]<p className="text-xs text-slate-400 max-w-[200px] mt-1">Inorganic materials do not get disintegrated[cite: 53].</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-1/2 space-y-12">
+            <div>
+              <h2 className="text-4xl font-black mb-4">Structural Resilience.</h2>
+              <p className="text-lg text-slate-400 font-light leading-relaxed">
+                The microscopic structure of the block unlocks architectural capabilities traditional clay bricks simply cannot match.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="border-l-2 border-blue-500 pl-6">
+                <TrendingDown className="text-blue-400 mb-3" size={28} />
+                <h4 className="text-xl font-bold mb-2">Earthquake Defenses</h4>
+                <p className="text-sm text-slate-400 font-light">The impact of earthquake forces is proportional to structural weight. [cite_start]AAC provides excellent seismic resistance[cite: 48, 49].</p>
+              </div>
+              <div className="border-l-2 border-blue-500 pl-6">
+                <Move className="text-blue-400 mb-3" size={28} />
+                <h4 className="text-xl font-bold mb-2">Enhanced Carpet Area</h4>
+                [cite_start]<p className="text-sm text-slate-400 font-light">Higher wall strength in thinner walls compared to thick conventional bricks, directly increasing usable floor space[cite: 55, 56].</p>
+              </div>
+              <div className="border-l-2 border-blue-500 pl-6">
+                <Shield className="text-blue-400 mb-3" size={28} />
+                <h4 className="text-xl font-bold mb-2">Zero Wastage</h4>
+                [cite_start]<p className="text-sm text-slate-400 font-light">Negligible breakage drastically reduces material wastage, ensuring maximum utilization of ordered stock[cite: 51].</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* --- WHATSAPP CTA --- */}
+      <section className="py-24 bg-white text-center px-6 md:px-12 border-t border-slate-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-8">
-            Ready to Optimize Your Next Build?
-          </h2>
-          <a
-            href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20the%20cost-saving%20advantages%20of%20your%20AAC%20blocks.`}
-            target="_blank"
+          <h2 className="text-4xl font-black text-slate-900 mb-8">Maximize Your Project ROI.</h2>
+          <a 
+            href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20leveraging%20the%20cost-saving%20advantages%20of%20AAC%20blocks.`}
+            target="_blank" 
             rel="noreferrer"
-            className="inline-flex items-center gap-3 bg-blue-600 text-white font-bold py-5 px-10 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-colors"
+            className="inline-block bg-blue-600 hover:bg-slate-900 text-white font-bold py-5 px-12 rounded-full text-lg shadow-[0_0_40px_rgba(37,99,235,0.3)] transition-all duration-300 transform hover:-translate-y-1"
           >
-            <CheckCircle2 size={24} />
-            Discuss Savings via WhatsApp
+            Connect With Sales
           </a>
         </div>
       </section>
-    </>
+
+    </div>
   );
 }
