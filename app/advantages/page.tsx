@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Flame, Shield, TrendingDown, Clock, Move, BugOff } from "lucide-react";
 
@@ -24,8 +25,8 @@ export default function PremiumAdvantagesPage() {
         >
           <source src="/advantages/videos/hero.mp4" type="video/mp4" />
         </video>
-        {/* Overlay for lightening video */}
-        <div className="absolute inset-0 bg-white/80 z-10"></div>
+        <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
+          <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
         {/* Hero Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -282,6 +283,7 @@ export default function PremiumAdvantagesPage() {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

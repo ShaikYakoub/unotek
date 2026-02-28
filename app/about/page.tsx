@@ -17,6 +17,7 @@ import {
   Maximize2,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 // --- Animated Counter Sub-Component ---
 const AnimatedStat = ({
@@ -357,7 +358,7 @@ export default function PremiumAboutPage() {
               alt="About Us CTA Background"
               className="w-full h-full object-cover opacity-40"
             />
-            <div className="absolute inset-0 bg-slate-900/60"></div>
+            <div className="absolute inset-0 bg-slate-900/70"></div>
           </div>
           <div className="relative z-10 max-w-2xl mx-auto px-6 py-12">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-lg">
@@ -378,6 +379,7 @@ export default function PremiumAboutPage() {
             </a>
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );

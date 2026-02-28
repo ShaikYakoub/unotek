@@ -470,28 +470,91 @@ export default function PremiumAACWebsite() {
             <p className="text-sm text-slate-400 mt-1 font-light">
               Premium AAC Blocks — Engineered for the Future.
             </p>
+            <div className="mt-4 flex justify-start">
+              <a
+                href={whatsappBase}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm bg-blue-600 text-white font-bold py-2.5 px-6 rounded-full shadow hover:bg-blue-700 transition-colors"
+              >
+                WhatsApp Enquiry
+              </a>
+            </div>
           </div>
           <div className="flex flex-col xs:flex-row gap-6 items-center">
-            <a
-              href="/manufacturing"
-              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
-            >
-              Manufacturing
-            </a>
-            <a
-              href={whatsappBase}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm bg-slate-900 text-white font-bold py-2.5 px-6 rounded-full hover:bg-slate-700 transition-colors"
-            >
-              WhatsApp Enquiry
-            </a>
+            {/* Improved footer nav links layout */}
+            <nav className="w-full grid grid-cols-2 gap-6 mb-4">
+              <div className="flex flex-col gap-2">
+                <a
+                  href="/"
+                  className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
+                >
+                  Home
+                </a>
+                <a
+                  href="/about"
+                  className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
+                >
+                  About Us
+                </a>
+                <a
+                  href="/calculator"
+                  className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
+                >
+                  Calculator
+                </a>
+              </div>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="/advantages"
+                  className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
+                >
+                  Advantages
+                </a>
+                <a
+                  href="/technical"
+                  className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
+                >
+                  Technical Spec
+                </a>
+                <a
+                  href="/manufacturing"
+                  className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
+                >
+                  Manufacturing
+                </a>
+              </div>
+            </nav>
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-100">
-          <p className="text-xs text-slate-300 text-center">
+          <p className="text-base md:text-lg font-semibold text-slate-400 text-center">
             © {new Date().getFullYear()} Unotek. All rights reserved.
           </p>
+          <div className="flex justify-center items-center mt-4">
+            <span className="text-base md:text-lg font-semibold text-slate-500 bg-blue-50 px-4 py-2 rounded-full shadow inline-flex items-center gap-2">
+              Made with
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-5 h-5 text-red-500 mx-1"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              by{" "}
+              <a
+                href="#"
+                className="font-bold text-blue-600 underline hover:text-blue-800"
+              >
+                Maveric Techsolutions
+              </a>
+            </span>
+          </div>
         </div>
       </footer>
 

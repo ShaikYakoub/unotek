@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Ruler, FileText, Scale, Thermometer, Box } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function PremiumTechnicalPage() {
   const whatsappNumber = "YOUR_CLIENT_NUMBER";
@@ -51,7 +52,7 @@ export default function PremiumTechnicalPage() {
   return (
     <>
       <Navbar />
-      <div className="font-sans text-slate-900 bg-white min-h-screen pb-20">
+      <div className="font-sans text-slate-900 bg-white min-h-screen">
         {/* --- HERO: ENGINEERING DATA --- */}
         <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-white px-6 md:px-12 text-center">
           {/* Hero Background Video - covers entire section */}
@@ -337,21 +338,16 @@ export default function PremiumTechnicalPage() {
         </section>
 
         {/* --- WHATSAPP CTA --- */}
-        <section className="py-24 text-center px-6 md:px-12 border-t border-slate-800 relative overflow-hidden">
-          {/* Background image and overlay */}
-          <div className="absolute inset-0 w-full h-full">
-            <img
-              src="/technical/images/cta-bg.png"
-              alt="CTA Background"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-slate-900/70"></div>
-          </div>
+        <section
+          className="py-36 text-center px-6 md:px-12 border-t border-slate-800 relative overflow-hidden bg-[url('/technical/images/cta-bg.png')] bg-cover bg-center"
+          style={{ position: 'relative' }}
+        >
+          <div className="absolute inset-0 bg-slate-900/70"></div>
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-4xl font-black text-white mb-6">
               Require Project-Specific Tolerances?
             </h2>
-            <p className="text-xl text-slate-400 mb-10 font-light">
+            <p className="text-xl text-slate-400 font-light">
               Send these exact engineering specs to our procurement team for a
               customized volume breakdown and logistics check.
             </p>
@@ -359,13 +355,14 @@ export default function PremiumTechnicalPage() {
               href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20have%20reviewed%20your%20technical%20specifications%20and%20need%20a%20consultation%20on%20grade%20requirements.`}
               target="_blank"
               rel="noreferrer"
-              className="inline-block bg-white text-slate-900 font-bold py-5 px-12 rounded-full text-lg shadow-xl hover:bg-blue-50 transition-all duration-300 transform hover:-translate-y-1"
+              className="inline-block bg-white text-slate-900 font-bold py-5 px-12 rounded-full text-lg shadow-xl hover:bg-blue-50 transition-all duration-300 transform hover:-translate-y-1 mt-8"
             >
               Consult Engineering Desk
             </a>
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 }

@@ -11,6 +11,7 @@ export default function CalculatorPage() {
           engine or calculator UI here.
         </p>
       </main>
+      <Footer />
     </>
   );
 }

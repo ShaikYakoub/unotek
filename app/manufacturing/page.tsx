@@ -11,6 +11,7 @@ import {
   Clock,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function PremiumProcessPage() {
   const whatsappNumber = "919876543210";
@@ -299,7 +300,7 @@ export default function PremiumProcessPage() {
           style={{ minHeight: "100%", minWidth: "100%" }}
         />
         {/* Overlay for readability - covers entire section */}
-        <div className="absolute inset-0 w-full h-full bg-white/70 z-10"></div>
+          <div className="absolute inset-0 w-full h-full bg-slate-900/70 z-10"></div>
         <div className="relative z-20 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-8">
             Ready to Procure Enterprise-Grade Blocks?
@@ -319,6 +320,7 @@ export default function PremiumProcessPage() {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
