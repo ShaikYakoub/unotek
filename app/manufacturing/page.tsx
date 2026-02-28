@@ -22,60 +22,70 @@ export default function PremiumProcessPage() {
       phase: 1,
       title: "1. Coal Fly Ash",
       desc: "The coal fly ash will be sent to the slurry preparing pond by wheel loader to be prepared into the required concentration coal fly ash slurry by adding rated water, which will be pumped into a slurry tank to be stored and ready to be used [cite: 115-116].",
+      media: { type: "video", src: "/manufacturing/videos/video-materials.mp4" },
     },
     {
       id: 2,
       phase: 1,
       title: "2. Lime",
       desc: "The powder will be sent into the lime powder silo for storage and ready to be used by bucket elevator, after coming into the factory [cite: 117-118].",
+      media: { type: "image", src: "/images/lime-storage.jpg" },
     },
     {
       id: 3,
       phase: 1,
       title: "3. Gypsum",
       desc: "The gypsum in the storage shed will be added into the slurry pond according to the required proportion, while preparing slurry [cite: 119-120].",
+      media: { type: "image", src: "/images/gypsum-storage.jpg" },
     },
     {
       id: 4,
       phase: 1,
       title: "4. Cement",
       desc: "The cement will be transported into the factory by tank truck and directly is pumped into the cement silo to be used [cite: 121-122].",
+      media: { type: "video", src: "/manufacturing/videos/video-materials.mp4" },
     },
     {
       id: 5,
       phase: 1,
       title: "5. Aluminium Powder",
       desc: "The purchased aluminium powder paste in the bucket or bag will be stored in its storehouse. [cite_start]When being used, it will be lifted to the second floor of the batching building, then measured and added into the aluminium mixer to prepare 5% suspending liquid to be used [cite: 123-124].",
+      media: { type: "image", src: "/images/aluminium-powder.jpg" },
     },
     {
       id: 6,
       phase: 2,
       title: "6. Waste & Scrape Slurry",
       desc: "The cleaning waste water under the casting machine will be pumped to the ball mill to be used as grinding water. [cite_start]The scrape from the cutting machine will be prepared to slurry and pumped into the waste slurry tank to be used [cite: 125-127].",
+      media: { type: "image", src: "/images/waste-slurry.jpg" },
     },
     {
       id: 7,
       phase: 2,
       title: "7. Batching, Mixing and Casting",
       desc: "Coal fly ash will be sent to the electronic scale in the batching building by pump. Lime and cement are sent by single screw conveyer. Aluminium powder is measured manually and prepared as a suspending liquid for each mould. [cite_start]The slurry temperature should arrive at the required process temperature before casting, and the mould will be moved to the bottom of the casting mixer by ferry car [cite: 128-137].",
+      media: { type: "video", src: "/manufacturing/videos/video-mixing.mp4" },
     },
     {
       id: 8,
       phase: 3,
       title: "8. Cutting and Grouping",
       desc: "After pre-curing, the green block arrives at the required strength. The crane takes it to the cutting machine section. After removing the mould, the green block is cut according to the required size and moved to the curing trolley in front of the autoclave for grouping. [cite_start]There are seven trolleys for each autoclave with 14 pieces of green block [cite: 138-142].",
+      media: { type: "video", src: "/manufacturing/videos/video-cutting.mp4" },
     },
     {
       id: 9,
       phase: 4,
       title: "9. Autoclaved and Finished Product",
       desc: "The green block, after grouping, will be moved into the autoclave by windlass for curing. The whole curing period is approx. 12h, pressure approx. 1.2Mpa, temperature approx. 185°C. [cite_start]After curing, the product will be pulled out of the autoclave and sent to the store yard [cite: 143-146].",
+      media: { type: "video", src: "/manufacturing/videos/video-autoclave.mp4" },
     },
     {
       id: 10,
       phase: 4,
       title: "10. Bottom Plate Returning & Oiling",
       desc: "After unloading, the side plate on the trolley will be lifted to the returning rail by crane, returned to the side of the cutting machine, combined with the mould, and sent to the mould returning line for cleaning and oiling to be reused [cite: 147-148].",
+      media: { type: "image", src: "/images/plate-returning.jpg" },
     },
   ];
 
@@ -137,6 +147,26 @@ export default function PremiumProcessPage() {
                   <div
                     className={`absolute -left-[41px] top-0 w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors duration-500 ${activePhase === step.phase ? "bg-blue-600" : "bg-slate-300"}`}
                   ></div>
+
+                  {/* Mixed Media Display */}
+                  <div className="mb-6 rounded-xl overflow-hidden border border-slate-200 bg-slate-100 flex items-center justify-center relative min-h-[220px]">
+                    {step.media?.type === "video" ? (
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                        src={step.media.src}
+                      />
+                    ) : step.media?.type === "image" ? (
+                      <img
+                        src={step.media.src}
+                        alt={step.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : null}
+                  </div>
 
                   <h3 className="text-2xl font-black text-slate-900 mb-4">
                     {step.title}
