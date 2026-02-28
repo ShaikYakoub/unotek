@@ -123,7 +123,7 @@ export default function PremiumProcessPage() {
             className="py-20"
           >
             <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
-              <Settings size={18} /> Production Infrastructure
+              <Settings size={18} /> Production
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
               The Manufacturing Standard.

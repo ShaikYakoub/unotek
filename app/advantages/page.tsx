@@ -62,7 +62,7 @@ export default function PremiumAdvantagesPage() {
               <span className="text-blue-600">Clay Bricks.</span>
             </h2>
             <p className="text-lg text-slate-500 font-light leading-relaxed">
-              Every cubic meter of traditional material you replace with LEOCON
+              Every cubic meter of traditional material you replace with UNOTEK
               AAC exponentially decreases your structural dead load while
               drastically accelerating your project timeline.
             </p>
@@ -262,7 +262,7 @@ export default function PremiumAdvantagesPage() {
             Maximize Your Project ROI.
           </h2>
           <p className="text-lg text-slate-700 font-light mb-6">
-            Discover how LEOCON AAC Blocks can dramatically reduce your
+            Discover how UNOTEK AAC Blocks can dramatically reduce your
             construction costs, speed up your project timeline, and deliver
             superior safety and durability. Our team is ready to help you unlock
             the full potential of your next build.

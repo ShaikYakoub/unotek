@@ -43,7 +43,7 @@ function AnimatedNumber({
   );
 }
 
-// ─── Grade specs (based on Leocon data) ───────────────────────────────────── //
+// ─── Grade specs (based on Unotek data) ───────────────────────────────────── //
 const GRADES = {
   "Grade 1": {
     label: "Grade 1",

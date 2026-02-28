@@ -88,7 +88,7 @@ export default function ProjectGallery({
             Applications
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            Proven Infrastructure.
+            Proven Performance.
           </h2>
           <p className="text-xl text-slate-500 font-light mt-4 leading-relaxed">
             AAC blocks are specified across every building typology — from

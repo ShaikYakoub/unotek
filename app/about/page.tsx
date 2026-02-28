@@ -109,12 +109,12 @@ export default function PremiumAboutPage() {
               transition={{ duration: 1 }}
             >
               <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-6 block">
-                Corporate Infrastructure
+                Corporate Performance
               </span>
               <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-6 tracking-tighter uppercase">
-                LEOCON{" "}
+                UNOTEK
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
-                  INFRA.
+                  
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
@@ -243,7 +243,7 @@ export default function PremiumAboutPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
-                Enterprise Infrastructure Scale.
+                Enterprise Performance Scale.
               </h2>
               <p className="text-xl font-light text-slate-500 max-w-3xl mx-auto">
                 [cite_start]Our 57m x 21.19m facility is engineered for a 50m³
@@ -365,12 +365,12 @@ export default function PremiumAboutPage() {
               Ready to Build the Future?
             </h2>
             <p className="text-xl md:text-2xl text-white/80 mb-8 font-light leading-relaxed drop-shadow-md">
-              Join us in redefining sustainable infrastructure. Connect with our
+              Join us in redefining sustainable performance. Connect with our
               team to explore partnership, investment, or career opportunities
-              at LEOCON Infra.
+              at UNOTEK.
             </p>
             <a
-              href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20LEOCON%20Infra.`}
+              href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20UNOTEK.`}
               target="_blank"
               rel="noreferrer"
               className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-700 transition-all duration-300 shadow-lg"

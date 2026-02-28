@@ -45,7 +45,7 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link href="/" className="relative z-50">
           <span className="text-2xl font-black text-slate-900 tracking-tighter uppercase">
-            LEOCON <span className="text-blue-600">INFRA</span>
+            UNOTEK
           </span>
         </Link>
 
