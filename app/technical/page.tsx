@@ -108,7 +108,9 @@ export default function PremiumTechnicalPage() {
                   </h2>
                 </div>
                 <p className="text-lg text-slate-500 font-light">
-                  Select your required block thickness to instantly calculate per-cubic-meter yields and market rate averages. 1 M³ is equal to 590 Red Clay Bricks.
+                  Select your required block thickness to instantly calculate
+                  per-cubic-meter yields and market rate averages. 1 M³ is equal
+                  to 590 Red Clay Bricks.
                 </p>
               </div>
 
@@ -220,7 +222,9 @@ export default function PremiumTechnicalPage() {
                 Compressive & Thermal Dynamics.
               </h2>
               <p className="text-xl text-slate-500 font-light max-w-3xl mx-auto">
-                Review standardized performance metrics across oven-dry density classes. Our blocks scale linearly in compressive strength while maintaining massive thermal efficiency.
+                Review standardized performance metrics across oven-dry density
+                classes. Our blocks scale linearly in compressive strength while
+                maintaining massive thermal efficiency.
               </p>
             </div>
 
