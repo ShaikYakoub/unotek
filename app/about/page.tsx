@@ -113,9 +113,7 @@ export default function PremiumAboutPage() {
               </span>
               <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-6 tracking-tighter uppercase">
                 UNOTEK
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
-                  
-                </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"></span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
                 [cite_start]Spearheaded by Mr. Siva Prasad of Iyantra

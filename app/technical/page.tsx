@@ -340,7 +340,7 @@ export default function PremiumTechnicalPage() {
         {/* --- WHATSAPP CTA --- */}
         <section
           className="py-36 text-center px-6 md:px-12 border-t border-slate-800 relative overflow-hidden bg-[url('/technical/images/cta-bg.png')] bg-cover bg-center"
-          style={{ position: 'relative' }}
+          style={{ position: "relative" }}
         >
           <div className="absolute inset-0 bg-slate-900/70"></div>
           <div className="relative z-10 max-w-3xl mx-auto">

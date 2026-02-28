@@ -26,7 +26,7 @@ export default function PremiumAdvantagesPage() {
           <source src="/advantages/videos/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
-          <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
         {/* Hero Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
