@@ -122,7 +122,7 @@ export default function PremiumAboutPage() {
                 Industries, we are pioneering next-generation AAC manufacturing
                 [cite: 180-182].
               </p>
-              <div className="flex items-center justify-center gap-3 text-sm font-bold tracking-widest uppercase text-slate-500 bg-white/80 backdrop-blur-md py-3 px-6 rounded-full inline-flex border border-slate-200 shadow-sm">
+              <div className="inline-flex items-center justify-center gap-3 text-sm font-bold tracking-widest uppercase text-slate-500 bg-white/80 backdrop-blur-md py-3 px-6 rounded-full border border-slate-200 shadow-sm">
                 <MapPin className="text-blue-600" size={18} />
                 [cite_start]Plot-22, APIIC Mydukur, Kadapa, AP [cite: 6-8]
               </div>
