@@ -121,7 +121,8 @@ export default function PremiumAboutPage() {
               </p>
               <div className="inline-flex items-center justify-center gap-3 text-sm font-bold tracking-widest uppercase text-slate-500 bg-white/80 backdrop-blur-md py-3 px-6 rounded-full border border-slate-200 shadow-sm">
                 <MapPin className="text-blue-600" size={18} />
-                Plot 165, YSR Jagananna Mega Industrial Hub, Kopparthy, Phase 1, YSR Dist. Kadapa, AP - 516003
+                Plot 165, YSR Jagananna Mega Industrial Hub, Kopparthy, Phase 1,
+                YSR Dist. Kadapa, AP - 516003
               </div>
             </motion.div>
           </div>

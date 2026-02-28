@@ -25,10 +25,11 @@ export default function Footer() {
               info@unotek.in
             </a>
             <div className="text-xs text-slate-500 mt-2">
-              Plot 165, YSR Jagananna Mega Industrial Hub, Kopparthy, Phase 1, YSR Dist. Kadapa, AP - 516003
+              Plot 165, YSR Jagananna Mega Industrial Hub, Kopparthy, Phase 1,
+              YSR Dist. Kadapa, AP - 516003
             </div>
             <div className="text-xs text-slate-500 mt-2">
-              Business Hours: Monday to Saturday, 9:00 AM to 6:00 PM<br />Sunday Off
+              Business Hours: Monday to Saturday, 9:00 AM to 6:00 PM
             </div>
           </div>
         </div>
