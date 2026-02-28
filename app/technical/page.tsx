@@ -51,26 +51,45 @@ export default function PremiumTechnicalPage() {
   return (
     <>
       <Navbar />
-      <div className="font-sans text-slate-900 bg-white min-h-screen pt-24 pb-20">
+      <div className="font-sans text-slate-900 bg-white min-h-screen pb-20">
         {/* --- HERO: ENGINEERING DATA --- */}
-        <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+        <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-white px-6 md:px-12 text-center">
+          {/* Hero Background Video - covers entire section */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+            style={{ minHeight: "100%", minWidth: "100%" }}
           >
-            <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
-              <FileText size={18} /> Engineering & Compliance
-            </span>
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
-              Technical Data.
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto font-light leading-relaxed">
-              Rigorous standardization and unyielding quality control. Interact
-              with our dimensional tolerances and compressive strength
-              parameters below.
-            </p>
-          </motion.div>
+            <source
+              src="/technical/videos/aac-honeycomb-microscopic.mp4"
+              type="video/mp4"
+            />
+          </video>
+          {/* Overlay for readability - covers entire section */}
+          <div className="absolute inset-0 w-full h-full bg-white/70 z-10"></div>
+          <div className="relative z-20 max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="py-20"
+            >
+              <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
+                <FileText size={18} /> Engineering & Compliance
+              </span>
+              <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
+                Technical <span className="text-blue-600">Specifications</span>.
+              </h1>
+              <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto font-light leading-relaxed">
+                Rigorous standardization and unyielding quality control.
+                Interact with our dimensional tolerances and compressive
+                strength parameters below.
+              </p>
+            </motion.div>
+          </div>
         </section>
 
         {/* --- INTERACTIVE BLOCK CONFIGURATOR --- */}
@@ -157,34 +176,39 @@ export default function PremiumTechnicalPage() {
             </div>
 
             {/* 3D Morphing Visualizer */}
-            <div className="relative h-[400px] flex items-center justify-center bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+            <div className="relative h-[250px] flex items-center justify-center bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
               <div className="absolute top-6 left-6 text-slate-400 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                 <Box size={16} /> Live Volume Preview
               </div>
-
               {/* The Morphing Block */}
-              <motion.div
-                layout
-                initial={false}
-                animate={{
-                  width: 300,
-                  height: 120,
-                  scaleY: blockData[activeSize].depthScale, // Physically morphs the depth
-                }}
-                transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                className="bg-slate-200 border-2 border-slate-300 rounded-lg shadow-inner flex items-center justify-center relative origin-bottom"
-              >
-                {/* Surface Texture Simulation */}
-                <div className="absolute inset-0 bg-slate-900/5 mix-blend-multiply opacity-50"></div>
-                <motion.span
-                  key={activeSize + "-label"}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="font-black text-slate-400 text-2xl z-10"
+              <div className="relative w-[300px] h-[120px] flex items-center justify-center">
+                <motion.div
+                  layout
+                  initial={false}
+                  animate={{
+                    width: 300,
+                    height: 120,
+                    scaleY: blockData[activeSize].depthScale, // Physically morphs the depth
+                  }}
+                  transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                  className="bg-slate-200 border-2 border-slate-300 rounded-lg shadow-inner flex items-center justify-center origin-bottom"
+                >
+                  {/* Surface Texture Simulation */}
+                  <div className="absolute inset-0 bg-slate-900/5 mix-blend-multiply opacity-50"></div>
+                </motion.div>
+                <span
+                  className="font-black text-slate-400 text-2xl z-20 pointer-events-none"
+                  style={{
+                    position: "absolute",
+                    left: "50%",
+                    top: "50%",
+                    transform: "translate(-50%, -50%)",
+                    fontSize: "1.5rem",
+                  }}
                 >
                   {activeSize}
-                </motion.span>
-              </motion.div>
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -313,8 +337,17 @@ export default function PremiumTechnicalPage() {
         </section>
 
         {/* --- WHATSAPP CTA --- */}
-        <section className="py-24 bg-slate-900 text-center px-6 md:px-12 border-t border-slate-800">
-          <div className="max-w-3xl mx-auto">
+        <section className="py-24 text-center px-6 md:px-12 border-t border-slate-800 relative overflow-hidden">
+          {/* Background image and overlay */}
+          <div className="absolute inset-0 w-full h-full">
+            <img
+              src="/technical/images/cta-bg.png"
+              alt="CTA Background"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-slate-900/70"></div>
+          </div>
+          <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-4xl font-black text-white mb-6">
               Require Project-Specific Tolerances?
             </h2>

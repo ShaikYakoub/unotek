@@ -10,10 +10,10 @@ export default function PremiumAdvantagesPage() {
   const containerRef = useRef(null);
 
   return (
-    <div className="font-sans text-slate-900 bg-white min-h-screen pt-24 pb-20">
+    <div className="font-sans text-slate-900 bg-white min-h-screen pb-20">
       <Navbar />
       {/* --- HERO: THE MATERIAL REVOLUTION --- */}
-      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto text-center relative overflow-hidden">
+      <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-white pt-20 px-6 md:px-12 max-w-7xl mx-auto text-center">
         {/* Background Video */}
         <video
           autoPlay
