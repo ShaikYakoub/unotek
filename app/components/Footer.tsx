@@ -14,9 +14,15 @@ export default function Footer() {
               href="https://wa.me/9515168868?text=Hello,%20I%20am%20inquiring%20from%20your%20website."
               target="_blank"
               rel="noreferrer"
-              className="text-sm bg-blue-600 text-white font-bold py-2.5 px-6 rounded-full shadow hover:bg-blue-700 transition-colors"
+              className="text-sm bg-blue-600 text-white font-bold py-1.5 px-4 rounded-full shadow hover:bg-blue-700 transition-colors w-fit"
             >
               WhatsApp
+            </a>
+            <a
+              href="tel:+919515168868"
+              className="text-sm text-blue-600 font-bold hover:underline"
+            >
+              Call: +91-95151 68868
             </a>
             <a
               href="mailto:info@unotek.in"
