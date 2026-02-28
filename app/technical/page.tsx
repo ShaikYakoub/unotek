@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function PremiumTechnicalPage() {
-  const whatsappNumber = "YOUR_CLIENT_NUMBER";
+  const whatsappNumber = "9515168868";
   const [activeSize, setActiveSize] = useState<"4 Inch" | "6 Inch" | "9 Inch">(
     "6 Inch",
   );

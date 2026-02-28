@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Flame, Shield, TrendingDown, Clock, Move, BugOff } from "lucide-react";
 
 export default function PremiumAdvantagesPage() {
-  const whatsappNumber = "YOUR_CLIENT_NUMBER";
+  const whatsappNumber = "9515168868";
   const containerRef = useRef(null);
 
   return (

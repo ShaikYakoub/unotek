@@ -9,15 +9,27 @@ export default function Footer() {
           <p className="text-sm text-slate-400 mt-1 font-light">
             Premium AAC Blocks — Engineered for the Future.
           </p>
-          <div className="mt-4 flex justify-start">
+          <div className="mt-4 flex flex-col gap-2 justify-start">
             <a
-              href="#"
+              href="https://wa.me/9515168868?text=Hello,%20I%20am%20inquiring%20from%20your%20website."
               target="_blank"
               rel="noreferrer"
               className="text-sm bg-blue-600 text-white font-bold py-2.5 px-6 rounded-full shadow hover:bg-blue-700 transition-colors"
             >
-              WhatsApp Enquiry
+              WhatsApp: +91-95151 68868
             </a>
+            <a
+              href="mailto:info@unotek.in"
+              className="text-sm text-blue-600 font-bold hover:underline"
+            >
+              info@unotek.in
+            </a>
+            <div className="text-xs text-slate-500 mt-2">
+              Plot 165, YSR Jagananna Mega Industrial Hub, Kopparthy, Phase 1, YSR Dist. Kadapa, AP - 516003
+            </div>
+            <div className="text-xs text-slate-500 mt-2">
+              Business Hours: Monday to Saturday, 9:00 AM to 6:00 PM<br />Sunday Off
+            </div>
           </div>
         </div>
         <nav className="w-full grid grid-cols-2 gap-6 mb-4">

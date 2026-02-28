@@ -68,7 +68,7 @@ const processSteps = [
 
 // ─── Component ────────────────────────────────────────────────────────────── //
 export default function PremiumAACWebsite() {
-  const whatsappNumber = "YOUR_CLIENT_NUMBER"; // ← replace with actual number
+  const whatsappNumber = "9515168868";
   const whatsappBase = `https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20procuring%20premium%20AAC%20blocks%20for%20an%20upcoming%20project.`;
 
   // Parallax for hero image
