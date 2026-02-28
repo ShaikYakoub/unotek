@@ -16,7 +16,7 @@ export default function Footer() {
               rel="noreferrer"
               className="text-sm bg-blue-600 text-white font-bold py-2.5 px-6 rounded-full shadow hover:bg-blue-700 transition-colors"
             >
-              WhatsApp: +91-95151 68868
+              WhatsApp
             </a>
             <a
               href="mailto:info@unotek.in"
