@@ -42,9 +42,7 @@ export default function PremiumAdvantagesPage() {
             <span className="text-blue-600">Outlast.</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto font-light leading-relaxed">
-            [cite_start]AAC Blocks make construction highly economical, being
-            about 66% lighter than conventional clay bricks[cite: 35]. Discover
-            the assured structural savings.
+            AAC Blocks make construction highly economical, being about 66% lighter than conventional clay bricks. Discover the assured structural savings.
           </p>
         </motion.div>
       </section>
@@ -119,10 +117,7 @@ export default function PremiumAdvantagesPage() {
                 Ultimate Safety Ratings.
               </h3>
               <p className="text-lg text-slate-600 font-light mb-6">
-                [cite_start]AAC Blocks possess the highest hourly fire-resistant
-                ratings per inch of any building material[cite: 46]. It simply
-                will not burn. [cite_start]Additionally, its porous nature
-                provides excellent thermal and acoustic insulation[cite: 46].
+                AAC Blocks possess the highest hourly fire-resistant ratings per inch of any building material. It simply will not burn. Additionally, its porous nature provides excellent thermal and acoustic insulation.
               </p>
             </motion.div>
 
@@ -152,16 +147,13 @@ export default function PremiumAdvantagesPage() {
                 Rapid Deployment.
               </h3>
               <p className="text-lg text-slate-600 font-light mb-6">
-                [cite_start]AAC Blocks are dry and set quickly, making them a
-                dramatically faster option[cite: 41]. [cite_start]Because they
-                come in pre-defined sizes and constant dimensions, builders
-                minimize the time required to adjust them[cite: 44].
+                AAC Blocks are dry and set quickly, making them a dramatically faster option. Because they come in pre-defined sizes and constant dimensions, builders minimize the time required to adjust them.
               </p>
               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm inline-block">
                 <p className="text-4xl font-black text-blue-600 mb-1">35%</p>
                 [cite_start]
                 <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">
-                  Reduction in plastering & labour cost [cite: 39]
+                  Reduction in plastering & labour cost
                 </p>
               </div>
             </motion.div>
@@ -217,9 +209,7 @@ export default function PremiumAdvantagesPage() {
                 <TrendingDown className="text-blue-400 mb-3" size={28} />
                 <h4 className="text-xl font-bold mb-2">Earthquake Defenses</h4>
                 <p className="text-sm text-slate-400 font-light">
-                  The impact of earthquake forces is proportional to structural
-                  weight. [cite_start]AAC provides excellent seismic
-                  resistance[cite: 48, 49].
+                  The impact of earthquake forces is proportional to structural weight. AAC provides excellent seismic resistance.
                 </p>
               </div>
               <div className="border-l-2 border-blue-500 pl-6">
@@ -227,9 +217,7 @@ export default function PremiumAdvantagesPage() {
                 <h4 className="text-xl font-bold mb-2">Enhanced Carpet Area</h4>
                 [cite_start]
                 <p className="text-sm text-slate-400 font-light">
-                  Higher wall strength in thinner walls compared to thick
-                  conventional bricks, directly increasing usable floor
-                  space[cite: 55, 56].
+                  Higher wall strength in thinner walls compared to thick conventional bricks, directly increasing usable floor space.
                 </p>
               </div>
               <div className="border-l-2 border-blue-500 pl-6">
@@ -237,8 +225,7 @@ export default function PremiumAdvantagesPage() {
                 <h4 className="text-xl font-bold mb-2">Zero Wastage</h4>
                 [cite_start]
                 <p className="text-sm text-slate-400 font-light">
-                  Negligible breakage drastically reduces material wastage,
-                  ensuring maximum utilization of ordered stock[cite: 51].
+                  Negligible breakage drastically reduces material wastage, ensuring maximum utilization of ordered stock.
                 </p>
               </div>
             </div>

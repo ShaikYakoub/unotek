@@ -116,13 +116,11 @@ export default function PremiumAboutPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"></span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
-                [cite_start]Spearheaded by Mr. Siva Prasad of Iyantra
-                Industries, we are pioneering next-generation AAC manufacturing
-                [cite: 180-182].
+                Spearheaded by Mr. Siva Prasad of Iyantra Industries, we are pioneering next-generation AAC manufacturing.
               </p>
               <div className="inline-flex items-center justify-center gap-3 text-sm font-bold tracking-widest uppercase text-slate-500 bg-white/80 backdrop-blur-md py-3 px-6 rounded-full border border-slate-200 shadow-sm">
                 <MapPin className="text-blue-600" size={18} />
-                [cite_start]Plot-22, APIIC Mydukur, Kadapa, AP [cite: 6-8]
+                Plot-22, APIIC Mydukur, Kadapa, AP
               </div>
             </motion.div>
           </div>
@@ -155,9 +153,7 @@ export default function PremiumAboutPage() {
                   The Ecological Deficit.
                 </h2>
                 <p className="text-2xl font-light text-slate-600 leading-relaxed mb-12">
-                  [cite_start]Since 60% of the country's electricity comes from
-                  coal-based power stations, India has a massive stock of fly
-                  ash[cite: 30].
+                  Since 60% of the country's electricity comes from coal-based power stations, India has a massive stock of fly ash.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div>
@@ -166,7 +162,7 @@ export default function PremiumAboutPage() {
                     </p>
                     [cite_start]
                     <p className="text-sm font-bold uppercase tracking-widest text-slate-500">
-                      Tons Generated Annually [cite: 30]
+                      Tons Generated Annually
                     </p>
                   </div>
                   <div>
@@ -175,7 +171,7 @@ export default function PremiumAboutPage() {
                     </p>
                     [cite_start]
                     <p className="text-sm font-bold uppercase tracking-widest text-slate-500">
-                      Currently Consumed [cite: 31]
+                      Currently Consumed
                     </p>
                   </div>
                 </div>
@@ -214,13 +210,7 @@ export default function PremiumAboutPage() {
                     The Architectural Solution.
                   </h2>
                   <p className="text-xl font-light text-slate-600 leading-relaxed mb-8">
-                    We transform this environmental threat into structural
-                    superiority. [cite_start]Fly-Ash is our primary raw
-                    material, constituting a massive{" "}
-                    <strong className="text-blue-600 font-black text-2xl">
-                      70% proportion
-                    </strong>{" "}
-                    in every AAC Block we manufacture [cite: 19-20].
+                    We transform this environmental threat into structural superiority. Fly-Ash is our primary raw material, constituting a massive <strong className="text-blue-600 font-black text-2xl">70% proportion</strong> in every AAC Block we manufacture.
                   </p>
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20your%20eco-friendly%20AAC%20blocks.`}
@@ -244,8 +234,7 @@ export default function PremiumAboutPage() {
                 Enterprise Performance Scale.
               </h2>
               <p className="text-xl font-light text-slate-500 max-w-3xl mx-auto">
-                [cite_start]Our 57m x 21.19m facility is engineered for a 50m³
-                daily capacity, expandable to 100m³[cite: 161, 164, 171, 176].
+                Our 57m x 21.19m facility is engineered for a 50m³ daily capacity, expandable to 100m³.
               </p>
             </div>
 
@@ -263,7 +252,7 @@ export default function PremiumAboutPage() {
                     className="absolute inset-0 w-full h-full object-contain"
                   />
                   <span className="text-slate-400 absolute bottom-4 left-4 bg-white/80 px-3 py-1 rounded-full">
-                    [cite: 176]
+                    {/* citation removed */}
                   </span>
                 </div>
               </div>
@@ -290,8 +279,7 @@ export default function PremiumAboutPage() {
                   </p>
                   [cite_start]
                   <p className="text-sm text-slate-500 font-light">
-                    Calculated across 300 active working days per annum[cite:
-                    162].
+                    Calculated across 300 active working days per annum.
                   </p>
                 </motion.div>
 
@@ -315,8 +303,7 @@ export default function PremiumAboutPage() {
                   </p>
                   [cite_start]
                   <p className="text-sm text-slate-500 font-light">
-                    Supported by a dedicated 120KVA Generator for uninterrupted
-                    runs[cite: 191, 193].
+                    Supported by a dedicated 120KVA Generator for uninterrupted runs.
                   </p>
                 </motion.div>
 
@@ -340,8 +327,7 @@ export default function PremiumAboutPage() {
                   </p>
                   [cite_start]
                   <p className="text-sm text-slate-500 font-light">
-                    Fresh soft water required per day for precision slurry
-                    mixture[cite: 192].
+                    Fresh soft water required per day for precision slurry mixture.
                   </p>
                 </motion.div>
               </div>
