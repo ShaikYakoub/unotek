@@ -40,14 +40,15 @@ const processSteps = [
     title: "Precision Blending",
     desc: "AAC is produced out of a precise mix of pulverized fly ash, lime, cement, gypsum, water, and aluminium. The chemical reaction from the aluminium paste provides the distinct porous structure and lightness.",
     video:
-      "/videos/Slow-motion%20extreme%20close-up%20of%20dark%20fly%20ash%20slurry%20and%20pure%20white%20lime%20powder%20blending.mp4",
+      "/videos/manufacturing videos/Slow-motion%20extreme%20close-up%20of%20dark%20fly%20ash%20slurry%20and%20pure%20white%20lime%20powder%20blending.mp4",
     imageRight: false,
   },
   {
     num: "02",
     title: "Mould Casting",
     desc: "The homogeneous slurry is poured into precision steel moulds in controlled volumes. The aluminium reacts to generate hydrogen, causing the mix to rise and form millions of uniformly distributed micro-pores throughout the block.",
-    video: "/videos/mold%20filling%20with%20grey%20slurry.mp4",
+    video:
+      "/videos/manufacturing videos/mold%20filling%20with%20grey%20slurry.mp4",
     imageRight: true,
   },
   {
@@ -55,14 +56,14 @@ const processSteps = [
     title: "Wire-Cut Dimensioning",
     desc: "Once the green cake has partially set, a taut stainless-steel wire array slices it with sub-millimetre precision into dimensionally accurate blocks — eliminating the mortar waste associated with conventional brickwork.",
     video:
-      "/videos/A%20taut%20steel%20wire%20smoothly%20slices%20through%20a%20large%2C%20semi-solid%20green%20AAC%20cake.mp4",
+      "/videos/manufacturing videos/A%20taut%20steel%20wire%20smoothly%20slices%20through%20a%20large%2C%20semi-solid%20green%20AAC%20cake.mp4",
     imageRight: false,
   },
   {
     num: "04",
     title: "Autoclaved Curing",
     desc: "Block hardness is achieved by cement strength and an instant curing mechanism by autoclaving. The blocks are hardened by steam-curing in pressurised autoclaves at 180 °C, resulting in a high-insulating, Grade A building product.",
-    video: "/videos/autoclave%20seal%20shut.mp4",
+    video: "/videos/manufacturing videos/autoclave%20seal%20shut.mp4",
     imageRight: true,
   },
 ];
@@ -94,7 +95,7 @@ export default function PremiumAACWebsite() {
           className="absolute inset-0 z-0 scale-110"
         >
           <Image
-            src="/images/modern%20skyscraper%20interior%20under%20construction.png"
+            src="/images/homepage images/modern%20skyscraper%20interior%20under%20construction.png"
             alt="Modern skyscraper interior under construction"
             fill
             priority
@@ -285,7 +286,7 @@ export default function PremiumAACWebsite() {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         >
           <source
-            src="/videos/drone%20shot%20of%20warehouse%20grok.mp4"
+            src="/videos/homepage videos/drone-shot-of-warehouse.mp4"
             type="video/mp4"
           />
         </video>
@@ -324,7 +325,7 @@ export default function PremiumAACWebsite() {
             className="relative h-[520px] w-full rounded-3xl overflow-hidden shadow-enterprise-lg"
           >
             <Image
-              src="/images/structural%20indian%20engineer%20reviewing%20a%20blueprint.png"
+              src="/images/homepage images/structural%20indian%20engineer%20reviewing%20a%20blueprint.png"
               alt="Structural engineer reviewing a blueprint"
               fill
               className="object-cover object-top"
@@ -416,7 +417,7 @@ export default function PremiumAACWebsite() {
             className="relative h-[400px] rounded-3xl overflow-hidden shadow-enterprise-lg"
           >
             <Image
-              src="/images/sleek%20glass%20beaker%20containing%20pulverized%20fly%20ash%2C%20next%20to%20raw%20gypsum%20crystals.png"
+              src="/images/homepage images/sleek%20glass%20beaker%20containing%20pulverized%20fly%20ash%2C%20next%20to%20raw%20gypsum%20crystals.png"
               alt="Fly ash and gypsum crystals — AAC raw materials"
               fill
               className="object-cover"
