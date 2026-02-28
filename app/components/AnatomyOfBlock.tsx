@@ -80,8 +80,8 @@ export default function AnatomyOfBlock() {
           {/* Macro product image as subtle background */}
           <div className="absolute inset-0">
             <Image
-              src="/images/macro%20photography%20of%20a%20single%20pristine%20AAC%20block.png"
-              alt="Macro photography of a pristine AAC block — porous structure"
+              src="/homepage/images/macro-of-AAC-block.png"
+              alt="Macro of AAC block — porous structure"
               fill
               className="object-cover opacity-20"
               sizes="(max-width: 768px) 100vw, 45vw"

@@ -39,16 +39,14 @@ const processSteps = [
     num: "01",
     title: "Precision Blending",
     desc: "AAC is produced out of a precise mix of pulverized fly ash, lime, cement, gypsum, water, and aluminium. The chemical reaction from the aluminium paste provides the distinct porous structure and lightness.",
-    video:
-      "/videos/manufacturing videos/Slow-motion%20extreme%20close-up%20of%20dark%20fly%20ash%20slurry%20and%20pure%20white%20lime%20powder%20blending.mp4",
+    video: "/homepage/videos/fly-ash-slurry-and-lime-blending.mp4",
     imageRight: false,
   },
   {
     num: "02",
     title: "Mould Casting",
     desc: "The homogeneous slurry is poured into precision steel moulds in controlled volumes. The aluminium reacts to generate hydrogen, causing the mix to rise and form millions of uniformly distributed micro-pores throughout the block.",
-    video:
-      "/videos/manufacturing videos/mold%20filling%20with%20grey%20slurry.mp4",
+    video: "/homepage/videos/mold-filling-with-slurry.mp4",
     imageRight: true,
   },
   {
@@ -95,8 +93,8 @@ export default function PremiumAACWebsite() {
           className="absolute inset-0 z-0 scale-110"
         >
           <Image
-            src="/images/homepage images/modern%20skyscraper%20interior%20under%20construction.png"
-            alt="Modern skyscraper interior under construction"
+            src="/homepage/images/hero-bg.png"
+            alt="Homepage Hero Background"
             fill
             priority
             placeholder="blur"
@@ -286,7 +284,7 @@ export default function PremiumAACWebsite() {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         >
           <source
-            src="/videos/homepage videos/drone-shot-of-warehouse.mp4"
+            src="/homepage/videos/drone-shot-of-warehouse.mp4"
             type="video/mp4"
           />
         </video>
@@ -325,7 +323,7 @@ export default function PremiumAACWebsite() {
             className="relative h-[520px] w-full rounded-3xl overflow-hidden shadow-enterprise-lg"
           >
             <Image
-              src="/images/homepage images/structural%20indian%20engineer%20reviewing%20a%20blueprint.png"
+              src="/homepage/images/structural%20indian%20engineer%20reviewing%20a%20blueprint.png"
               alt="Structural engineer reviewing a blueprint"
               fill
               className="object-cover object-top"
@@ -417,7 +415,7 @@ export default function PremiumAACWebsite() {
             className="relative h-[400px] rounded-3xl overflow-hidden shadow-enterprise-lg"
           >
             <Image
-              src="/images/homepage images/sleek%20glass%20beaker%20containing%20pulverized%20fly%20ash%2C%20next%20to%20raw%20gypsum%20crystals.png"
+              src="/homepage/images/sleek%20glass%20beaker%20containing%20pulverized%20fly%20ash%2C%20next%20to%20raw%20gypsum%20crystals.png"
               alt="Fly ash and gypsum crystals — AAC raw materials"
               fill
               className="object-cover"
@@ -437,7 +435,34 @@ export default function PremiumAACWebsite() {
         <AdvancedEstimationEngine whatsappLink={whatsappBase} />
       </section>
 
-      {/* ─── FOOTER ──────────────────────────────────────────────────────────── */}
+      {/* ─── HOMEPAGE CTA SECTION ────────────────────────────────────────────── */}
+      <section className="relative py-24 flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full object-cover z-0">
+          <img
+            src="/homepage/images/cta-bg.png"
+            alt="Homepage CTA Background"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-slate-900/50"></div>
+        </div>
+        <div className="relative z-10 max-w-2xl mx-auto px-6 py-12">
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-lg">
+            Build with Unotek.
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 mb-8 font-light leading-relaxed drop-shadow-md">
+            Ready to engineer your next project with premium AAC blocks? Connect
+            with our team for procurement, partnership, or technical support.
+          </p>
+          <a
+            href={whatsappBase}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-700 transition-all duration-300 shadow-lg"
+          >
+            Contact Us on WhatsApp
+          </a>
+        </div>
+      </section>
       <footer className="py-16 bg-white border-t border-slate-100 px-8 md:px-24">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
@@ -448,28 +473,10 @@ export default function PremiumAACWebsite() {
           </div>
           <div className="flex flex-col xs:flex-row gap-6 items-center">
             <a
-              href="#process"
+              href="/manufacturing"
               className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
             >
               Manufacturing
-            </a>
-            <a
-              href="#anatomy"
-              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
-            >
-              Anatomy
-            </a>
-            <a
-              href="#projects"
-              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#calculator"
-              className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors"
-            >
-              Calculator
             </a>
             <a
               href={whatsappBase}

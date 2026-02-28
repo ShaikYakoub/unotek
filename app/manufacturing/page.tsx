@@ -193,7 +193,7 @@ export default function PremiumProcessPage() {
               <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-white/90 backdrop-blur-md px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg flex items-center gap-3 z-20">
                 <div className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full animate-pulse"></div>
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-widest">
-                  Step {activeStepId} Active
+                  Step {activeStepId}
                 </span>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function PremiumProcessPage() {
 
           {/* Left Column: The 10 Steps (Scrollable) */}
           <div className="w-full lg:w-1/2 space-y-8 pb-32 order-2 lg:order-1">
-            <div className="border-l-2 border-slate-100 pl-6 md:pl-8 space-y-16 overflow-y-auto max-h-[80vh] scroll-smooth snap-y snap-mandatory">
+            <div className="border-l-2 border-slate-100 pl-6 md:pl-8 space-y-16 overflow-y-auto max-h-[80vh] scroll-smooth">
               {processSteps.map((step) => (
                 <motion.div
                   key={step.id}
@@ -213,7 +213,7 @@ export default function PremiumProcessPage() {
                     setActivePhase(step.phase);
                   }}
                   transition={{ duration: 0.5 }}
-                  className={`relative transition-all duration-500 snap-start ${
+                  className={`relative transition-all duration-500 min-h-[80vh] ${
                     activePhase === step.phase
                       ? "opacity-100 scale-100"
                       : "opacity-40 scale-95"

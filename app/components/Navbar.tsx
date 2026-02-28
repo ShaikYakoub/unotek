@@ -31,8 +31,7 @@ export default function Navbar() {
   ];
 
   // Filter out 'Home' link when on home page
-  const filteredLinks =
-    pathname === "/" ? navLinks.filter((link) => link.path !== "/") : navLinks;
+  const filteredLinks = navLinks;
 
   return (
     <header

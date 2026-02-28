@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import ScrollProgressBar from "./components/ScrollProgressBar";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import PageTransition from "./components/PageTransition";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="antialiased selection:bg-enterprise-blue selection:text-white">
         <ScrollProgressBar />
         <PageTransition>{children}</PageTransition>
+        <FloatingWhatsApp whatsappLink="https://wa.me/919876543210?text=Hello,%20I%20am%20inquiring%20from%20your%20website." />
       </body>
     </html>
   );

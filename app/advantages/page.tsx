@@ -254,8 +254,7 @@ export default function PremiumAdvantagesPage() {
             alt="CTA Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 w-full h-full backdrop-blur-sm"></div>
-          <div className="absolute inset-0 w-full h-full bg-white/40"></div>
+          <div className="absolute inset-0 w-full h-full bg-white/70"></div>
         </div>
         <div className="max-w-3xl mx-auto relative z-10">
           <h2 className="text-4xl font-black text-slate-900 mb-8">

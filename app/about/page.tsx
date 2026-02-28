@@ -349,6 +349,35 @@ export default function PremiumAboutPage() {
             </div>
           </div>
         </section>
+        {/* --- ABOUT US CTA SECTION --- */}
+        <section className="relative py-24 flex flex-col items-center justify-center text-center overflow-hidden">
+          <div className="absolute inset-0 w-full h-full object-cover z-0">
+            <img
+              src="/about/images/cta-bg.png"
+              alt="About Us CTA Background"
+              className="w-full h-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 bg-slate-900/60"></div>
+          </div>
+          <div className="relative z-10 max-w-2xl mx-auto px-6 py-12">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-lg">
+              Ready to Build the Future?
+            </h2>
+            <p className="text-xl md:text-2xl text-white/80 mb-8 font-light leading-relaxed drop-shadow-md">
+              Join us in redefining sustainable infrastructure. Connect with our
+              team to explore partnership, investment, or career opportunities
+              at LEOCON Infra.
+            </p>
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20LEOCON%20Infra.`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-700 transition-all duration-300 shadow-lg"
+            >
+              Contact Us on WhatsApp
+            </a>
+          </div>
+        </section>
       </div>
     </>
   );
