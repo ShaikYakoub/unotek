@@ -27,7 +27,7 @@ export default function Navbar() {
     { name: "About Us", path: "/about" },
     { name: "Advantages", path: "/advantages" },
     { name: "Technical Spec", path: "/technical" },
-    { name: "Manufacturing", path: "/process" },
+    { name: "Manufacturing", path: "/manufacturing" },
   ];
 
   // Filter out 'Home' link when on home page
