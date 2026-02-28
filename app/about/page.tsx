@@ -308,7 +308,8 @@ export default function PremiumAboutPage() {
                     </span>
                   </p>
                   <p className="text-sm text-slate-500 font-light">
-                    Supported by a dedicated 120KVA Generator for uninterrupted runs.
+                    Supported by a dedicated 120KVA Generator for uninterrupted
+                    runs.
                   </p>
                 </motion.div>
 
@@ -331,7 +332,8 @@ export default function PremiumAboutPage() {
                     </span>
                   </p>
                   <p className="text-sm text-slate-500 font-light">
-                    Fresh soft water required per day for precision slurry mixture.
+                    Fresh soft water required per day for precision slurry
+                    mixture.
                   </p>
                 </motion.div>
               </div>

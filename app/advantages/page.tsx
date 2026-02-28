@@ -191,9 +191,8 @@ export default function PremiumAdvantagesPage() {
                 <div className="bg-slate-900/80 backdrop-blur-sm p-4 rounded-xl border border-slate-700 text-center mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                   <BugOff className="text-blue-400 mx-auto mb-2" size={24} />
                   <p className="font-bold">Termite Free</p>
-                  [cite_start]
                   <p className="text-xs text-slate-400 max-w-[200px] mt-1">
-                    Inorganic materials do not get disintegrated[cite: 53].
+                    Inorganic materials do not get disintegrated.
                   </p>
                 </div>
               </div>
@@ -224,14 +223,16 @@ export default function PremiumAdvantagesPage() {
                 <Move className="text-blue-400 mb-3" size={28} />
                 <h4 className="text-xl font-bold mb-2">Enhanced Carpet Area</h4>
                 <p className="text-sm text-slate-400 font-light">
-                  Higher wall strength in thinner walls compared to thick conventional bricks, directly increasing usable floor space.
+                  Higher wall strength in thinner walls compared to thick
+                  conventional bricks, directly increasing usable floor space.
                 </p>
               </div>
               <div className="border-l-2 border-blue-500 pl-6">
                 <Shield className="text-blue-400 mb-3" size={28} />
                 <h4 className="text-xl font-bold mb-2">Zero Wastage</h4>
                 <p className="text-sm text-slate-400 font-light">
-                  Negligible breakage drastically reduces material wastage, ensuring maximum utilization of ordered stock.
+                  Negligible breakage drastically reduces material wastage,
+                  ensuring maximum utilization of ordered stock.
                 </p>
               </div>
             </div>
