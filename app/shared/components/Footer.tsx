@@ -1,11 +1,25 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-16 bg-white border-t border-slate-100 px-8 md:px-24">
+    <footer
+      id="site-footer"
+      className="py-16 bg-white border-t border-slate-100 px-8 md:px-24 scroll-mt-24"
+    >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div>
-          <h2 className="text-2xl font-black tracking-tighter">UNOTEK.</h2>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.avif"
+              alt="Unotek logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-lg object-cover"
+            />
+            <h2 className="text-2xl font-black tracking-tighter">UNOTEK.</h2>
+          </div>
           <p className="text-sm text-slate-400 mt-1 font-light">
             Premium AAC Blocks — Engineered for the Future.
           </p>
@@ -14,7 +28,7 @@ export default function Footer() {
               href="https://wa.me/9515168868?text=Hello,%20I%20am%20inquiring%20from%20your%20website."
               target="_blank"
               rel="noreferrer"
-              className="text-sm bg-blue-600 text-white font-bold py-1.5 px-4 rounded-full shadow hover:bg-blue-700 transition-colors w-fit"
+              className="text-sm bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow hover:bg-blue-700 transition-colors w-fit"
             >
               WhatsApp
             </a>
@@ -39,46 +53,46 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <nav className="w-full grid grid-cols-2 gap-6 mb-4">
+        <nav className="w-full grid grid-cols-2 gap-6 mb-4 md:max-w-sm">
           <div className="flex flex-col gap-2">
-            <a
+            <Link
               href="/"
               className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
             >
               About Us
-            </a>
-            <a
-              href="/calculator"
+            </Link>
+            <Link
+              href="#site-footer"
               className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
             >
-              Calculator
-            </a>
+              Contact
+            </Link>
           </div>
           <div className="flex flex-col gap-2">
-            <a
+            <Link
               href="/advantages"
               className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
             >
               Advantages
-            </a>
-            <a
-              href="/technical"
+            </Link>
+            <Link
+              href="/products"
               className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
             >
-              Technical Spec
-            </a>
-            <a
+              Products
+            </Link>
+            <Link
               href="/manufacturing"
               className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors px-3 py-1 rounded"
             >
               Manufacturing
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

@@ -80,7 +80,7 @@ export default function AnatomyOfBlock() {
           {/* Macro product image as subtle background */}
           <div className="absolute inset-0">
             <Image
-              src="/homepage/images/macro-of-AAC-block.png"
+              src="/homepage/images/macro-of-AAC-block.avif"
               alt="Macro of AAC block — porous structure"
               fill
               className="object-cover opacity-20"
@@ -142,7 +142,7 @@ export default function AnatomyOfBlock() {
                                   ? "5%"
                                   : "3%",
                         }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                       />
                     </motion.div>
                   )}

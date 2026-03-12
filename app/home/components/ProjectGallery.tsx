@@ -13,7 +13,7 @@ const projects = [
     id: 1,
     title: "Aura Commercial Plaza",
     category: "Commercial Buildings",
-    image: "/homepage/gallery/images/gallery-commercial.jpg",
+    image: "/homepage/gallery/images/gallery-commercial.avif",
     heightClass: "h-[360px]",
     description:
       "Multi-storey retail and office complex utilizing 6-inch AAC blocks for superior acoustic insulation between suites and a 25% reduction in structural steel.",
@@ -22,7 +22,7 @@ const projects = [
     id: 2,
     title: "Verdant Eco-Resort",
     category: "Hospitality Buildings",
-    image: "/homepage/gallery/images/gallery-hospitality.jpg",
+    image: "/homepage/gallery/images/gallery-hospitality.avif",
     heightClass: "h-[540px]",
     description:
       "High-end resort leveraging the exceptional fire and soundproofing properties of AAC walls for guest safety, privacy, and a GRIHA 5-star rating.",
@@ -31,7 +31,7 @@ const projects = [
     id: 3,
     title: "Meridian Low-Cost Housing",
     category: "Residential / Low Cost",
-    image: "/homepage/gallery/images/gallery-residential.jpg",
+    image: "/homepage/gallery/images/gallery-residential.avif",
     heightClass: "h-[320px]",
     description:
       "A 500-unit residential sector using 4-inch blocks to slash foundation dead load and cut construction-cycle time by over 30%.",
@@ -40,7 +40,7 @@ const projects = [
     id: 4,
     title: "Apex Industrial Park",
     category: "Industrial Buildings",
-    image: "/homepage/gallery/images/gallery-industrial.jpg",
+    image: "/homepage/gallery/images/gallery-industrial.avif",
     heightClass: "h-[460px]",
     description:
       "Warehouse construction using 9-inch AAC blocks for maximum thermal insulation, 4-hour fire ratings, and zero-maintenance exterior walls.",
@@ -49,7 +49,7 @@ const projects = [
     id: 5,
     title: "Oakbridge International School",
     category: "Educational Buildings",
-    image: "/homepage/gallery/images/gallery-education.jpg",
+    image: "/homepage/gallery/images/gallery-education.avif",
     heightClass: "h-[400px]",
     description:
       "State-of-the-art campus built entirely with lightweight AAC blocks, lowering the building carbon footprint and meeting LEED certification criteria.",
@@ -58,7 +58,7 @@ const projects = [
     id: 6,
     title: "Medisurge Hospital Complex",
     category: "Healthcare Buildings",
-    image: "/homepage/gallery/images/gallery-healthcare.jpg",
+    image: "/homepage/gallery/images/gallery-healthcare.avif",
     heightClass: "h-[480px]",
     description:
       "A multi-wing hospital built with AAC blocks for infection control, rapid construction, and 4-hour fire-rated walls. All patient rooms feature high acoustic insulation and zero asbestos.",
@@ -111,7 +111,7 @@ export default function ProjectGallery({
         - break-inside-avoid prevents a card splitting across columns
         - space-y-8 gives vertical rhythm between stacked cards
       */}
-      <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+      <div className="columns-2 lg:columns-3 gap-4 md:gap-8 space-y-4 md:space-y-8">
         {projects.map((project, i) => (
           <motion.div
             key={project.id}
@@ -121,7 +121,7 @@ export default function ProjectGallery({
             transition={{
               duration: 0.7,
               delay: i * 0.07,
-              ease: [0.22, 1, 0.36, 1],
+              ease: "easeOut",
             }}
             onMouseEnter={() => setHoveredId(project.id)}
             onMouseLeave={() => setHoveredId(null)}

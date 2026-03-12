@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
-import ScrollProgressBar from "./components/ScrollProgressBar";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
-import PageTransition from "./components/PageTransition";
+import ScrollProgressBar from "./shared/components/ScrollProgressBar";
+import FloatingWhatsApp from "./shared/components/FloatingWhatsApp";
+import PageTransition from "./shared/components/PageTransition";
 import "./globals.css";
 
 const inter = Inter({
@@ -42,7 +42,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="video"
-          href="/videos/Slow-motion%20extreme%20close-up%20of%20dark%20fly%20ash%20slurry%20and%20pure%20white%20lime%20powder%20blending.mp4"
+          href="/homepage/videos/fly-ash-slurry-and-lime-blending.webm"
         />
       </head>
       <body className="antialiased selection:bg-enterprise-blue selection:text-white">

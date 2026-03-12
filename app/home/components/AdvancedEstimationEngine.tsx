@@ -64,6 +64,13 @@ const GRADES = {
 } as const;
 
 type GradeKey = keyof typeof GRADES;
+type BlockSizeKey = "4 Inch" | "6 Inch" | "9 Inch";
+
+const BLOCK_YIELD_PER_M3: Record<BlockSizeKey, number> = {
+  "4 Inch": 83,
+  "6 Inch": 55,
+  "9 Inch": 36,
+};
 
 const ESG = [
   { label: "CO₂ Avoided (kg)", icon: Leaf, getValue: (v: number) => v * 35 },
@@ -87,14 +94,14 @@ export default function AdvancedEstimationEngine({
 }) {
   const [volume, setVolume] = useState<number>(100);
   const [grade, setGrade] = useState<GradeKey>("Grade 1");
+  const [blockSize, setBlockSize] = useState<BlockSizeKey>("6 Inch");
   const [activeTab, setActiveTab] = useState<"structural" | "esg">(
     "structural",
   );
 
   const spec = GRADES[grade];
   const bricksReplaced = volume * 590;
-  const hvacSavingLow = Math.round(volume * 0.2 * 10) / 10;
-  const hvacSavingHigh = Math.round(volume * 0.3 * 10) / 10;
+  const blocksRequired = volume * BLOCK_YIELD_PER_M3[blockSize];
 
   return (
     <div className="max-w-7xl mx-auto px-8 md:px-24 font-sans">
@@ -157,8 +164,34 @@ export default function AdvancedEstimationEngine({
             </div>
           </div>
 
+          <div className="w-full lg:w-[30%]">
+            <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block mb-4">
+              Block Size
+            </label>
+            <div className="flex bg-slate-100 p-1.5 rounded-xl">
+              {(Object.keys(BLOCK_YIELD_PER_M3) as BlockSizeKey[]).map(
+                (size) => (
+                  <button
+                    key={size}
+                    onClick={() => setBlockSize(size)}
+                    className={`flex-1 py-3 px-3 rounded-lg font-bold transition-all text-sm ${
+                      blockSize === size
+                        ? "bg-white text-slate-900 shadow-sm"
+                        : "text-slate-500 hover:text-slate-700"
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ),
+              )}
+            </div>
+            <p className="mt-2 text-xs text-slate-400">
+              Yield basis: {BLOCK_YIELD_PER_M3[blockSize]} blocks / m³
+            </p>
+          </div>
+
           {/* Grade toggle */}
-          <div className="w-full lg:w-[44%]">
+          <div className="w-full lg:w-[38%]">
             <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block mb-4">
               Compressive Strength Grade
             </label>
@@ -267,16 +300,29 @@ export default function AdvancedEstimationEngine({
             </div>
 
             {/* Dynamic brick replacement */}
-            <div className="border-l-2 border-blue-200 bg-blue-50/40 rounded-r-2xl pl-6 py-5 mb-12">
-              <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">
-                Red Clay Bricks Eliminated for {volume} m³
-              </p>
-              <p className="text-4xl font-black text-blue-700">
-                <AnimatedNumber value={bricksReplaced} />
-              </p>
-              <p className="text-sm text-blue-500/80 mt-1">
-                1 m³ = 590 clay bricks
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+              <div className="border-l-2 border-blue-200 bg-blue-50/40 rounded-r-2xl pl-6 py-5">
+                <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">
+                  Red Clay Bricks Eliminated for {volume} m³
+                </p>
+                <p className="text-4xl font-black text-blue-700">
+                  <AnimatedNumber value={bricksReplaced} />
+                </p>
+                <p className="text-sm text-blue-500/80 mt-1">
+                  1 m³ = 590 clay bricks
+                </p>
+              </div>
+              <div className="border-l-2 border-slate-300 bg-slate-100 rounded-r-2xl pl-6 py-5">
+                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">
+                  AAC Blocks Required ({blockSize})
+                </p>
+                <p className="text-4xl font-black text-slate-900">
+                  <AnimatedNumber value={blocksRequired} />
+                </p>
+                <p className="text-sm text-slate-500/90 mt-1">
+                  Based on selected block data
+                </p>
+              </div>
             </div>
 
             {/* HVAC box */}
