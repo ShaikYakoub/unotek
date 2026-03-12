@@ -84,16 +84,19 @@ export default function PremiumProcessPage() {
 
   // Mixed media assignment for each step
   const stepMedia: Record<number, { type: string; src: string }> = {
-    1: { type: "image", src: "/manufacturing/images/materials-storage.jpg" },
-    2: { type: "image", src: "/manufacturing/images/material-preparation.jpg" },
-    3: { type: "image", src: "/manufacturing/images/aluminum-mixing.jpg" },
-    4: { type: "video", src: "/manufacturing/videos/factory-overview.mp4" },
-    5: { type: "video", src: "/manufacturing/videos/slurry-mixing.mp4" },
-    6: { type: "image", src: "/manufacturing/images/waste-recycling.jpg" },
-    7: { type: "video", src: "/manufacturing/videos/wire-cutting.mp4" },
-    8: { type: "video", src: "/manufacturing/videos/block-grouping.mp4" },
-    9: { type: "video", src: "/manufacturing/videos/autoclave-curing.mp4" },
-    10: { type: "image", src: "/manufacturing/images/blocks-yard.jpg" },
+    1: { type: "image", src: "/manufacturing/images/materials-storage.avif" },
+    2: {
+      type: "image",
+      src: "/manufacturing/images/material-preparation.avif",
+    },
+    3: { type: "image", src: "/manufacturing/images/aluminum-mixing.avif" },
+    4: { type: "video", src: "/manufacturing/videos/factory-overview.webm" },
+    5: { type: "video", src: "/manufacturing/videos/slurry-mixing.webm" },
+    6: { type: "image", src: "/manufacturing/images/waste-recycling.avif" },
+    7: { type: "video", src: "/manufacturing/videos/wire-cutting.webm" },
+    8: { type: "video", src: "/manufacturing/videos/block-grouping.webm" },
+    9: { type: "video", src: "/manufacturing/videos/autoclave-curing.webm" },
+    10: { type: "image", src: "/manufacturing/images/blocks-yard.avif" },
   };
 
   return (
@@ -111,7 +114,7 @@ export default function PremiumProcessPage() {
           className="absolute inset-0 w-full h-full object-cover z-0"
           style={{ minHeight: "100%", minWidth: "100%" }}
         >
-          <source src="/manufacturing/videos/hero-bg.mp4" type="video/mp4" />
+          <source src="/manufacturing/videos/hero-bg.webm" type="video/webm" />
         </video>
         {/* Overlay for readability - covers entire section */}
         <div className="absolute inset-0 w-full h-full bg-white/70 z-10"></div>
@@ -163,7 +166,7 @@ export default function PremiumProcessPage() {
                       activeStepId as keyof typeof stepMedia
                     ] || {
                       type: "image",
-                      src: "/images/blocks-stack.jpg",
+                      src: "/images/blocks-stack.avif",
                     };
                     if (media.type === "video") {
                       return (
@@ -294,7 +297,7 @@ export default function PremiumProcessPage() {
       <section className="relative py-24 px-6 md:px-12 border-t border-slate-100 text-center overflow-hidden">
         {/* CTA Background Image - covers entire section */}
         <img
-          src="/manufacturing/images/cta-bg.png"
+          src="/manufacturing/images/cta-bg.avif"
           alt="AAC blocks background"
           className="absolute inset-0 w-full h-full object-cover z-0"
           style={{ minHeight: "100%", minWidth: "100%" }}

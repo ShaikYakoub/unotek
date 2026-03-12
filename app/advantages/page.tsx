@@ -23,7 +23,7 @@ export default function PremiumAdvantagesPage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src="/advantages/videos/hero.mp4" type="video/mp4" />
+          <source src="/advantages/videos/hero.webm" type="video/webm" />
         </video>
         <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
         <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
@@ -88,7 +88,10 @@ export default function PremiumAdvantagesPage() {
                   playsInline
                   className="w-full h-full object-cover"
                 >
-                  <source src="/advantages/videos/scale.mp4" type="video/mp4" />
+                  <source
+                    src="/advantages/videos/scale.webm"
+                    type="video/webm"
+                  />
                 </video>
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-slate-900 shadow-sm">
                   66% Lighter
@@ -112,7 +115,10 @@ export default function PremiumAdvantagesPage() {
                   playsInline
                   className="w-full h-full object-cover"
                 >
-                  <source src="/advantages/videos/fire.mp4" type="video/mp4" />
+                  <source
+                    src="/advantages/videos/fire.webm"
+                    type="video/webm"
+                  />
                 </video>
               </div>
               <h3 className="text-3xl font-black text-slate-900 mb-4">
@@ -143,7 +149,7 @@ export default function PremiumAdvantagesPage() {
                   className="w-full h-full object-cover"
                 >
                   <source
-                    src="/advantages/videos/rapid-deployment.mp4"
+                    src="/advantages/videos/rapid-deployment.webm"
                     type="video/mp4"
                   />
                 </video>
@@ -179,7 +185,7 @@ export default function PremiumAdvantagesPage() {
             {/* The interactive block image container */}
             <div className="relative w-full aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
               <img
-                src="/advantages/images/aac-honeycomb-studio-cut.png"
+                src="/advantages/images/aac-honeycomb-studio-cut.avif"
                 alt="AAC Honeycomb Studio Cut"
                 className="absolute inset-0 w-full h-full object-cover rounded-3xl"
               />
@@ -245,7 +251,7 @@ export default function PremiumAdvantagesPage() {
         {/* Background image and overlay */}
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/advantages/images/cta-bg.jpg"
+            src="/advantages/images/cta-bg.avif"
             alt="CTA Background"
             className="w-full h-full object-cover"
           />

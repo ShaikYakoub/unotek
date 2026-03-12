@@ -53,15 +53,14 @@ const processSteps = [
     num: "03",
     title: "Wire-Cut Dimensioning",
     desc: "Once the green cake has partially set, a taut stainless-steel wire array slices it with sub-millimetre precision into dimensionally accurate blocks — eliminating the mortar waste associated with conventional brickwork.",
-    video:
-      "/videos/manufacturing videos/A%20taut%20steel%20wire%20smoothly%20slices%20through%20a%20large%2C%20semi-solid%20green%20AAC%20cake.mp4",
+    video: "/homepage/videos/aac-cake-cutting.mp4",
     imageRight: false,
   },
   {
     num: "04",
     title: "Autoclaved Curing",
     desc: "Block hardness is achieved by cement strength and an instant curing mechanism by autoclaving. The blocks are hardened by steam-curing in pressurised autoclaves at 180 °C, resulting in a high-insulating, Grade A building product.",
-    video: "/videos/manufacturing videos/autoclave%20seal%20shut.mp4",
+    video: "/homepage/videos/autoclave%20seal%20shut.mp4",
     imageRight: true,
   },
 ];
@@ -93,12 +92,12 @@ export default function PremiumAACWebsite() {
           className="absolute inset-0 z-0 scale-110"
         >
           <Image
-            src="/homepage/images/hero-bg.png"
+            src="/homepage/images/hero-bg.avif"
             alt="Homepage Hero Background"
             fill
             priority
             placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+            blurDataURL="data:image/avif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
             className="object-cover object-center"
             sizes="100vw"
           />
@@ -265,7 +264,10 @@ export default function PremiumAACWebsite() {
                     className="w-full h-full object-cover"
                     key={step.video}
                   >
-                    <source src={step.video} type="video/mp4" />
+                    <source
+                      src={step.video.replace(".mp4", ".webm")}
+                      type="video/webm"
+                    />
                   </video>
                 </div>
               </motion.div>
@@ -284,8 +286,8 @@ export default function PremiumAACWebsite() {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         >
           <source
-            src="/homepage/videos/drone-shot-of-warehouse.mp4"
-            type="video/mp4"
+            src="/homepage/videos/drone-shot-of-warehouse.webm"
+            type="video/webm"
           />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
@@ -323,7 +325,7 @@ export default function PremiumAACWebsite() {
             className="relative h-[520px] w-full rounded-3xl overflow-hidden shadow-enterprise-lg"
           >
             <Image
-              src="/homepage/images/structural%20indian%20engineer%20reviewing%20a%20blueprint.png"
+              src="/homepage/images/structural%20indian%20engineer%20reviewing%20a%20blueprint.avif"
               alt="Structural engineer reviewing a blueprint"
               fill
               className="object-cover object-top"
@@ -415,7 +417,7 @@ export default function PremiumAACWebsite() {
             className="relative h-[400px] rounded-3xl overflow-hidden shadow-enterprise-lg"
           >
             <Image
-              src="/homepage/images/sleek%20glass%20beaker%20containing%20pulverized%20fly%20ash%2C%20next%20to%20raw%20gypsum%20crystals.png"
+              src="/homepage/images/sleek%20glass%20beaker%20containing%20pulverized%20fly%20ash%2C%20next%20to%20raw%20gypsum%20crystals.avif"
               alt="Fly ash and gypsum crystals — AAC raw materials"
               fill
               className="object-cover"
@@ -439,7 +441,7 @@ export default function PremiumAACWebsite() {
       <section className="relative py-24 flex flex-col items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full object-cover z-0">
           <img
-            src="/homepage/images/cta-bg.png"
+            src="/homepage/images/cta-bg.avif"
             alt="Homepage CTA Background"
             className="w-full h-full object-cover opacity-40"
           />

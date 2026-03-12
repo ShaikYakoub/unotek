@@ -88,13 +88,13 @@ export default function PremiumAboutPage() {
               muted
               playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-multiply"
-              poster="/about/images/hero-bg.png"
+              poster="/about/images/hero-bg.avif"
             >
               <source src="/about/videos/hero-bg.mp4" type="video/mp4" />
             </video>
             {/* Fallback Hero Image if video not available */}
             <img
-              src="/about/images/hero-bg.png"
+              src="/about/images/hero-bg.avif"
               alt="About Hero Background"
               className="w-full h-full object-cover absolute inset-0 opacity-30 mix-blend-multiply"
               style={{ zIndex: -1 }}
