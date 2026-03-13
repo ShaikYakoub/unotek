@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
 
   // Enterprise Image Optimization
   images: {
@@ -13,23 +15,37 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        // Target all video files in your public directory
-        source: "/(.*\\.mp4)",
+        // Next static chunks are content-hashed; cache aggressively.
+        source: "/_next/static/:path*",
         headers: [
           {
             key: "Cache-Control",
-            // Cache videos locally in the browser for 1 year (immutable)
             value: "public, max-age=31536000, immutable",
-          },
-          {
-            key: "Accept-Ranges",
-            value: "bytes", // Allows the browser to stream the 6s video in chunks
           },
         ],
       },
       {
-        // Cache all static assets (fonts, SVGs, images)
-        source: "/:path*\.(woff2|svg|png|jpg|jpeg)",
+        // Target all major static media/assets in public directory
+        source:
+          "/:path*\\.(avif|webp|png|jpg|jpeg|svg|gif|ico|mp4|webm|woff|woff2)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Accept-Ranges",
+            value: "bytes",
+          },
+          {
+            key: "Vary",
+            value: "Accept-Encoding",
+          },
+        ],
+      },
+      {
+        // Cache optimized image responses from Next image optimizer.
+        source: "/_next/image",
         headers: [
           {
             key: "Cache-Control",
