@@ -15,9 +15,12 @@ const getWidth = (val: number, max: number) => `${(val / max) * 100}%`;
 
 export default function CompressiveThermalSection() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-white border-t border-slate-100">
+    <section className="pt-14 md:pt-20 pb-8 md:pb-12 px-6 md:px-12 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 md:mb-20">
+          <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
+            Verified Metrics
+          </p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
             Compressive &amp; Thermal Dynamics.
           </h2>

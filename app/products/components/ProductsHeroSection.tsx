@@ -1,16 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { PackageSearch } from "lucide-react";
 
 export default function ProductsHeroSection() {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6 md:px-12 text-center">
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/products/images/hero.avif"
           alt="Products Hero"
-          className="w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/60" />
       </div>

@@ -12,7 +12,6 @@ import ScaleSection from "./home/components/ScaleSection";
 import EngineerTrustSection from "./home/components/EngineerTrustSection";
 import IngredientsSection from "./home/components/IngredientsSection";
 import HomeCtaSection from "./home/components/HomeCtaSection";
-import FloatingWhatsApp from "./shared/components/FloatingWhatsApp";
 import Navbar from "./shared/components/Navbar";
 import Footer from "./shared/components/Footer";
 
@@ -28,7 +27,7 @@ const processSteps = [
     num: "02",
     title: "Mould Casting",
     desc: "The homogeneous slurry is poured into precision steel moulds in controlled volumes. The aluminium reacts to generate hydrogen, causing the mix to rise and form millions of uniformly distributed micro-pores throughout the block.",
-    video: "/homepage/videos/mold-filling-with-slurry.webm",
+    video: "/homepage/videos/mould-casting.webm",
     imageRight: true,
   },
   {
@@ -42,7 +41,7 @@ const processSteps = [
     num: "04",
     title: "Autoclaved Curing",
     desc: "Block hardness is achieved by cement strength and an instant curing mechanism by autoclaving. The blocks are hardened by steam-curing in pressurised autoclaves at 180 °C, resulting in a high-insulating, Grade A building product.",
-    video: "/homepage/videos/autoclave%20seal%20shut.webm",
+    video: "/homepage/videos/autoclaved-curing.webm",
     imageRight: true,
   },
 ];
@@ -61,29 +60,32 @@ export default function PremiumAACWebsite() {
   return (
     <div className="font-sans text-slate-900 bg-[#F8F9FA] min-h-screen selection:bg-blue-200">
       <Navbar />
-      <HomeHeroSection whatsappBase={whatsappBase} heroRef={heroRef} heroImageY={heroImageY} />
+      <HomeHeroSection
+        whatsappBase={whatsappBase}
+        heroRef={heroRef}
+        heroImageY={heroImageY}
+      />
       <TrustStripSection />
       <HomeProcessSection processSteps={processSteps} />
       <ScaleSection />
 
-      <section id="anatomy" className="py-32 bg-slate-900 text-white">
+      <section id="anatomy" className="py-20 md:py-32 bg-slate-900 text-white">
         <AnatomyOfBlock />
       </section>
 
       <EngineerTrustSection whatsappBase={whatsappBase} />
       <IngredientsSection />
 
-      <section id="projects" className="py-32 bg-white">
+      <section id="projects" className="py-16 md:py-24 bg-white">
         <ProjectGallery whatsappLink={whatsappBase} />
       </section>
 
-      <section id="calculator" className="py-32 bg-[#F8F9FA]">
+      <section id="calculator" className="py-14 md:py-24 bg-[#F8F9FA]">
         <AdvancedEstimationEngine whatsappLink={whatsappBase} />
       </section>
 
       <HomeCtaSection whatsappBase={whatsappBase} />
       <Footer />
-      <FloatingWhatsApp whatsappLink={whatsappBase} />
     </div>
   );
 }

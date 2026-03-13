@@ -1,15 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function AboutHeroSection() {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/about/images/hero.avif"
           alt="About Hero"
-          className="w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/60" />
       </div>

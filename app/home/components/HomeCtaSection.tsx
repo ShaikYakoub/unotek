@@ -4,7 +4,7 @@ type Props = {
 
 export default function HomeCtaSection({ whatsappBase }: Props) {
   return (
-    <section className="px-8 md:px-24 pb-12 bg-slate-50">
+    <section className="px-6 md:px-24 pt-2 md:pt-4 pb-10 md:pb-12 bg-slate-50">
       <div className="max-w-7xl mx-auto rounded-[2rem] border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-blue-100 p-8 md:p-12 text-center shadow-[0_20px_80px_rgba(37,99,235,0.12)]">
         <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
           Build with Unotek.

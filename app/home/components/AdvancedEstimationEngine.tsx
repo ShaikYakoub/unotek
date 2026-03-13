@@ -121,7 +121,7 @@ export default function AdvancedEstimationEngine({
           Enterprise Tools
         </p>
         <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tighter">
-          Project ROI &amp; Impact Engine
+          Project&nbsp;&nbsp;ROI&nbsp; &amp; &nbsp;Impact&nbsp;&nbsp;Engine
         </h2>
         <p className="text-xl text-slate-500 font-light max-w-3xl mx-auto leading-relaxed">
           Set your volume and structural grade to instantly calculate savings,

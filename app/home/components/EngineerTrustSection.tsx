@@ -10,14 +10,14 @@ type Props = {
 
 export default function EngineerTrustSection({ whatsappBase }: Props) {
   return (
-    <section className="py-32 px-8 md:px-24 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+    <section className="py-20 md:py-32 px-6 md:px-24 bg-white">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9 }}
-          className="relative h-[520px] w-full rounded-3xl overflow-hidden shadow-enterprise-lg"
+          className="relative h-[380px] md:h-[520px] w-full rounded-3xl overflow-hidden shadow-enterprise-lg"
         >
           <Image
             src="/homepage/images/engineer-reviewing-blueprint.avif"

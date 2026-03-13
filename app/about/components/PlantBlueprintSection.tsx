@@ -6,9 +6,12 @@ import { Factory, Zap, Droplets, Maximize2 } from "lucide-react";
 
 export default function PlantBlueprintSection() {
   return (
-    <section className="py-20 md:py-32 bg-slate-50 border-t border-slate-200 px-6 md:px-12">
+    <section className="pt-14 md:pt-20 pb-10 md:pb-14 bg-slate-50 border-t border-slate-200 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-20">
+        <div className="text-center mb-10 md:mb-20">
+          <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
+            Plant Infrastructure
+          </p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
             Enterprise Performance Scale.
           </h2>

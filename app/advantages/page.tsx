@@ -12,7 +12,7 @@ export default function PremiumAdvantagesPage() {
   const whatsappNumber = "9515168868";
 
   return (
-    <div className="font-sans text-slate-900 bg-white min-h-screen pb-20">
+    <div className="font-sans text-slate-900 bg-white min-h-screen">
       <Navbar />
       <AdvantagesHeroSection />
       <AdvantagesComparisonSection />

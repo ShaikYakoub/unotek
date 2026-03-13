@@ -41,8 +41,11 @@ export default function EnvironmentalThreatSection({ whatsappNumber }: Props) {
   return (
     <>
       {/* The Ecological Deficit Section */}
-      <section className="py-24 bg-slate-50 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <section className="py-16 md:py-24 bg-slate-50 px-6 md:px-12">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <p className="w-full text-xs font-bold tracking-[0.3em] uppercase text-blue-500 md:hidden">
+            ESG Insight
+          </p>
           <h2 className="w-full text-4xl font-black tracking-tight text-slate-900 md:hidden">
             The Ecological Deficit.
           </h2>
@@ -65,6 +68,9 @@ export default function EnvironmentalThreatSection({ whatsappNumber }: Props) {
           </div>
 
           <div className="w-full md:w-1/2 text-left">
+            <p className="hidden md:block text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
+              ESG Insight
+            </p>
             <h2 className="hidden md:block text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
               The Ecological Deficit.
             </h2>
@@ -95,8 +101,11 @@ export default function EnvironmentalThreatSection({ whatsappNumber }: Props) {
       </section>
 
       {/* The Architectural Solution Section */}
-      <section className="py-24 bg-white px-6 md:px-12 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <section className="py-16 md:py-24 bg-white px-6 md:px-12 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <p className="w-full text-xs font-bold tracking-[0.3em] uppercase text-blue-500 md:hidden">
+            Circular Materiality
+          </p>
           <h2 className="w-full text-4xl font-black tracking-tight text-slate-900 md:hidden">
             The Architectural Solution.
           </h2>
@@ -118,6 +127,9 @@ export default function EnvironmentalThreatSection({ whatsappNumber }: Props) {
             </div>
           </div>
           <div className="w-full md:w-1/2">
+            <p className="hidden md:block text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
+              Circular Materiality
+            </p>
             <h2 className="hidden md:block text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
               The Architectural Solution.
             </h2>

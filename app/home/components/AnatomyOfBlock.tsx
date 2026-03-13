@@ -64,7 +64,7 @@ export default function AnatomyOfBlock() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-16 text-center"
+        className="mb-12 md:mb-16 text-center"
       >
         <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-400 mb-4">
           Material Science
@@ -74,7 +74,7 @@ export default function AnatomyOfBlock() {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
         {/* ── LEFT: interactive layer selector ──────────────────────────────── */}
         <div className="relative rounded-3xl overflow-hidden border border-slate-700 bg-slate-800 shadow-2xl">
           {/* Macro product image as subtle background */}

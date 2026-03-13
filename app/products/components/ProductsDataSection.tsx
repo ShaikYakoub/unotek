@@ -26,10 +26,13 @@ export default function ProductsDataSection({
   blockData,
 }: Props) {
   return (
-    <section className="py-24 px-6 md:px-12 bg-slate-50 border-y border-slate-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="space-y-10 z-10">
+    <section className="py-16 md:py-24 px-6 md:px-12 bg-slate-50 border-y border-slate-100 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div className="space-y-8 md:space-y-10 z-10">
           <div>
+            <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
+              Selection Tools
+            </p>
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 bg-white rounded-lg shadow-sm border border-slate-200 text-blue-600">
                 <Ruler size={24} />

@@ -23,9 +23,12 @@ const products = [
 
 export default function ProductsCatalogSection() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-white">
+    <section className="pt-14 md:pt-20 pb-8 md:pb-12 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
+          <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
+            Product Matrix
+          </p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-4">
             Available Products
           </h2>

@@ -3,8 +3,8 @@ import { TrendingDown, Move, Shield, BugOff } from "lucide-react";
 
 export default function AdvantagesAnatomySection() {
   return (
-    <section className="py-32 bg-slate-900 text-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16">
+    <section className="py-20 md:py-32 bg-slate-900 text-white overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10 md:gap-16">
         <div className="md:w-1/2 relative group cursor-crosshair">
           <h3 className="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">
             Hover to Inspect Structure
@@ -34,6 +34,9 @@ export default function AdvantagesAnatomySection() {
 
         <div className="md:w-1/2 space-y-12">
           <div>
+            <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-400 mb-3">
+              Performance Anatomy
+            </p>
             <h2 className="text-4xl font-black mb-4">Structural Resilience.</h2>
             <p className="text-lg text-slate-400 font-light leading-relaxed">
               The microscopic structure of the block unlocks architectural

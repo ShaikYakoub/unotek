@@ -4,8 +4,11 @@ type Props = {
 
 export default function AdvantagesCtaSection({ whatsappNumber }: Props) {
   return (
-    <section className="py-24 px-8 md:px-24 bg-slate-50 border-t border-slate-100">
+    <section className="py-12 md:py-20 px-6 md:px-24 bg-slate-50 border-t border-slate-100">
       <div className="max-w-7xl mx-auto rounded-[2rem] border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-blue-100 p-8 md:p-12 text-center shadow-[0_20px_80px_rgba(37,99,235,0.12)]">
+        <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-600 mb-4">
+          Commercial Impact
+        </p>
         <h2 className="text-4xl font-black text-blue-900 mb-8">
           Maximize Your Project ROI.
         </h2>

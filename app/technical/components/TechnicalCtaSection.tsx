@@ -4,8 +4,11 @@ type Props = {
 
 export default function TechnicalCtaSection({ whatsappNumber }: Props) {
   return (
-    <section className="py-36 text-center px-8 md:px-24 border-t border-slate-100 bg-white">
+    <section className="py-12 md:py-20 text-center px-6 md:px-24 border-t border-slate-100 bg-white">
       <div className="max-w-7xl mx-auto rounded-[2rem] border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-blue-100 p-8 md:p-12 shadow-[0_20px_80px_rgba(37,99,235,0.12)]">
+        <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-600 mb-4">
+          Technical Support
+        </p>
         <h2 className="text-4xl font-black text-blue-900 mb-6">
           Require Project-Specific Tolerances?
         </h2>

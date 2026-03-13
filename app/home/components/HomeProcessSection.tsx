@@ -16,14 +16,14 @@ type Props = {
 
 export default function HomeProcessSection({ processSteps }: Props) {
   return (
-    <section id="process" className="py-32 px-8 md:px-24 bg-white">
+    <section id="process" className="py-20 md:py-32 px-6 md:px-24 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="mb-24"
+          className="mb-14 md:mb-24"
         >
           <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-4">
             ISO Process
@@ -33,7 +33,7 @@ export default function HomeProcessSection({ processSteps }: Props) {
           </h2>
         </motion.div>
 
-        <div className="space-y-32">
+        <div className="space-y-20 md:space-y-32">
           {processSteps.map((step) => (
             <motion.div
               key={step.num}
@@ -41,7 +41,7 @@ export default function HomeProcessSection({ processSteps }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+              className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
             >
               <div className={step.imageRight ? "order-1 md:order-2" : ""}>
                 <span className="text-8xl font-black text-slate-100 leading-none select-none">

@@ -18,7 +18,7 @@ export default function ManufacturingTimelineSection({
   stepMedia,
 }: Props) {
   return (
-    <section className="px-6 md:px-12 max-w-7xl mx-auto py-12">
+    <section className="px-6 md:px-12 max-w-7xl mx-auto pt-3 md:pt-5 pb-8 md:pb-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {processSteps.map((step) => {
           const media = stepMedia[step.id] || {

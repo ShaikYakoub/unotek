@@ -4,9 +4,12 @@ import { motion } from "framer-motion";
 
 export default function AdvantagesComparisonSection() {
   return (
-    <section className="relative px-6 md:px-12 max-w-7xl mx-auto py-24">
-      <div className="flex flex-col lg:flex-row gap-16 items-start">
+    <section className="relative px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-24">
+      <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-start">
         <div className="lg:w-1/3 lg:sticky lg:top-32 space-y-6 z-10">
+          <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500">
+            Comparative Edge
+          </p>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
             The End of <br /> Conventional <br />
             <span className="text-blue-600">Clay Bricks.</span>
@@ -19,7 +22,7 @@ export default function AdvantagesComparisonSection() {
           <div className="hidden lg:block w-24 h-1 bg-blue-600 mt-8"></div>
         </div>
 
-        <div className="lg:w-2/3 space-y-32">
+        <div className="lg:w-2/3 space-y-20 md:space-y-32">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

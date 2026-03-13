@@ -69,7 +69,7 @@ export default function PremiumProcessPage() {
       id: 10,
       phaseName: "Phase 5 - Autoclaving & Finishing",
       title: "10. Bottom Plate Returning & Oiling",
-      desc: "After unloading, the side plate on the trolley will be lifted to the returning rail by crane, returned to the side of the cutting machine, combined with the mould, and sent to the mould returning line for cleaning and oiling to be reused.",
+      desc: "After unloading, the side plate on the trolley is lifted to the returning rail by crane, sent back to the cutting line, combined with the mould, and routed through the mould-return system for cleaning and oiling. This closed-loop preparation ensures dimensional consistency, minimizes surface contamination, and keeps each mould ready for the next casting cycle with repeatable quality.",
     },
   ];
 
@@ -100,7 +100,10 @@ export default function PremiumProcessPage() {
       <Navbar />
       <ManufacturingHeroSection />
 
-      <div className="max-w-5xl w-full mx-auto text-center px-6 mb-12 mt-10">
+      <div className="max-w-5xl w-full mx-auto text-center px-6 mb-4 md:mb-6 mt-10">
+        <p className="text-xs font-bold tracking-[0.3em] uppercase text-blue-500 mb-3">
+          Process Documentation
+        </p>
         <h2 className="text-2xl font-bold text-slate-900 mb-3">
           Process Workflow Cards
         </h2>

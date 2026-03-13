@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: "Unotek | Premium AAC Blocks — Engineered for the Future",
   description:
     "Next-generation Autoclaved Aerated Concrete engineered for monumental structural integrity and zero environmental compromise. Request a quotation for your enterprise project.",
+  icons: {
+    icon: "/logo.avif",
+    shortcut: "/logo.avif",
+    apple: "/logo.avif",
+  },
   openGraph: {
     title: "Unotek | Premium AAC Blocks",
     description:
@@ -48,7 +53,7 @@ export default function RootLayout({
       <body className="antialiased selection:bg-enterprise-blue selection:text-white">
         <ScrollProgressBar />
         <PageTransition>{children}</PageTransition>
-        <FloatingWhatsApp whatsappLink="https://wa.me/919876543210?text=Hello,%20I%20am%20inquiring%20from%20your%20website." />
+        <FloatingWhatsApp whatsappLink="https://wa.me/9515168868?text=Hello,%20I%20am%20inquiring%20from%20your%20website." />
       </body>
     </html>
   );

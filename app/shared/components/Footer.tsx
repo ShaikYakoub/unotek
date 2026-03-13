@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer
       id="site-footer"
-      className="bg-white border-t border-slate-100 px-8 md:px-24 pt-16 pb-10 scroll-mt-24"
+      className="bg-white border-t border-slate-100 px-6 md:px-24 pt-12 md:pt-16 pb-8 md:pb-10 scroll-mt-24"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.2fr_0.8fr_1fr] gap-12 pb-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.2fr_1fr] gap-10 md:gap-12 pb-8 md:pb-10">
         <div className="max-w-md sm:col-span-2 md:col-span-1">
           <div className="flex items-center gap-3 mb-5">
             <Image
@@ -30,65 +29,12 @@ export default function Footer() {
             Precision-manufactured AAC blocks for faster builds, lower dead
             load, and enterprise-grade project performance.
           </p>
-          <div className="mt-6 flex flex-col items-start gap-4">
-            <a
-              href="https://wa.me/9515168868?text=Hello,%20I%20am%20inquiring%20from%20your%20website."
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2.5 text-sm bg-blue-600 text-white font-bold py-3 px-5 rounded-full shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition-colors w-fit"
-            >
-              <MessageCircle size={18} />
-              Chat with us
-            </a>
+          <div className="mt-6 flex flex-col items-start gap-2">
             <div className="text-xs text-slate-500">
               Business Hours: Monday to Saturday, 9:00 AM to 6:00 PM
             </div>
           </div>
         </div>
-
-        <nav className="w-full md:max-w-sm">
-          <h3 className="text-sm font-black uppercase tracking-[0.22em] text-slate-900 mb-5">
-            Quick Links
-          </h3>
-          <div className="flex flex-col gap-3">
-            <Link
-              href="/"
-              className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/advantages"
-              className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              Advantages
-            </Link>
-            <Link
-              href="/products"
-              className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              Products
-            </Link>
-            <Link
-              href="/manufacturing"
-              className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              Manufacturing
-            </Link>
-            <Link
-              href="#site-footer"
-              className="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              Contact
-            </Link>
-          </div>
-        </nav>
 
         <div className="w-full">
           <h3 className="text-sm font-black uppercase tracking-[0.22em] text-slate-900 mb-5">
@@ -123,32 +69,16 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-8 border-t border-slate-100 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="max-w-7xl mx-auto pt-6 md:pt-8 border-t border-slate-100 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p className="text-sm md:text-base font-semibold text-slate-400 text-center md:text-left">
           © {new Date().getFullYear()} Unotek. All rights reserved.
         </p>
         <div className="flex justify-center md:justify-end items-center">
-          <span className="text-sm md:text-base font-semibold text-slate-500 bg-blue-50 px-4 py-2 rounded-full shadow inline-flex items-center gap-2">
-            Made with
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5 text-red-500 mx-1"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                clipRule="evenodd"
-              />
-            </svg>
-            by{" "}
-            <a
-              href="#"
-              className="font-bold text-blue-600 underline hover:text-blue-800"
-            >
-              Maveric Techsolutions
-            </a>
+          <span className="text-xs sm:text-sm font-semibold text-slate-600 bg-blue-50/80 px-3.5 py-2.5 rounded-2xl border border-blue-100 inline-flex items-center gap-2 text-center sm:text-left">
+            Website by
+            <span className="font-bold text-blue-700">
+              Maverick Tecnovations
+            </span>
           </span>
         </div>
       </div>
