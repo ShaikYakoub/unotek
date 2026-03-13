@@ -1,20 +1,23 @@
-import { productImagePrompts } from "./productImagePrompts";
+import Image from "next/image";
 
 const products = [
   {
     name: "AAC Blocks - 4 Inch",
     dimensions: '24" x 8" x 4"',
     useCase: "Internal partitions and low-load walls",
+    image: "/manufacturing/images/4-inch.avif",
   },
   {
     name: "AAC Blocks - 6 Inch",
     dimensions: '24" x 8" x 6"',
     useCase: "External walls and mixed-use structures",
+    image: "/manufacturing/images/6-inch.avif",
   },
   {
     name: "AAC Blocks - 9 Inch",
     dimensions: '24" x 8" x 9"',
     useCase: "High-load zones and industrial envelopes",
+    image: "/manufacturing/images/9-inch.avif",
   },
 ];
 
@@ -33,13 +36,19 @@ export default function ProductsCatalogSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {products.map((product, index) => (
+          {products.map((product) => (
             <article
               key={product.name}
               className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
             >
-              <div className="h-48 rounded-2xl bg-gradient-to-br from-slate-200 via-slate-100 to-white border border-slate-200 flex items-center justify-center text-slate-500 font-semibold text-sm tracking-wide uppercase">
-                Product Image Slot
+              <div className="h-48 rounded-2xl border border-slate-200 relative overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <h3 className="text-2xl font-black text-slate-900 mt-5 mb-2">
                 {product.name}
@@ -48,9 +57,6 @@ export default function ProductsCatalogSection() {
                 {product.dimensions}
               </p>
               <p className="text-slate-700">{product.useCase}</p>
-              <p className="text-xs text-slate-400 mt-5">
-                Image prompt: {productImagePrompts[index]}
-              </p>
             </article>
           ))}
         </div>

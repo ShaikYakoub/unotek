@@ -10,7 +10,7 @@ type BlockInfo = {
   yield: number;
   rate: string;
   avg: string;
-  depthScale: number;
+  previewHeight: number;
   useCase: string;
 };
 
@@ -119,15 +119,13 @@ export default function ProductsDataSection({
           </div>
           <div className="relative w-[300px] h-[120px] flex items-center justify-center">
             <motion.div
-              layout
               initial={false}
               animate={{
                 width: 300,
-                height: 120,
-                scaleY: blockData[activeSize].depthScale,
+                height: blockData[activeSize].previewHeight,
               }}
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
-              className="bg-slate-200 border-2 border-slate-300 rounded-lg shadow-inner flex items-center justify-center origin-bottom"
+              className="bg-slate-200 border-2 border-slate-300 rounded-lg shadow-inner flex items-center justify-center"
             />
             <span
               className="font-black text-slate-500 text-2xl z-20 pointer-events-none"

@@ -20,7 +20,7 @@ export default function PremiumProductsPage() {
       yield: 83,
       rate: "Rs.50-60",
       avg: "Rs.4500",
-      depthScale: 0.4,
+      previewHeight: 48,
       useCase: "Partition walls, utility cores, and low-load internal planning",
     },
     "6 Inch": {
@@ -28,7 +28,7 @@ export default function PremiumProductsPage() {
       yield: 55,
       rate: "Rs.75-85",
       avg: "Rs.4400",
-      depthScale: 0.6,
+      previewHeight: 72,
       useCase:
         "External walls for residential and commercial mid-rise projects",
     },
@@ -37,7 +37,7 @@ export default function PremiumProductsPage() {
       yield: 36,
       rate: "Rs.110-120",
       avg: "Rs.4150",
-      depthScale: 0.9,
+      previewHeight: 108,
       useCase:
         "Industrial, high-load, and high thermal-performance wall systems",
     },

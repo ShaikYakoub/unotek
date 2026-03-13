@@ -83,7 +83,7 @@ export default function Navbar() {
             href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20inquiring%20from%20your%20website.`}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold py-2.5 px-5 rounded-full text-sm transition-colors shadow-lg shadow-slate-900/10"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition-colors shadow-lg shadow-blue-600/20"
           >
             <MessageCircle size={16} />
             Direct Enquiry

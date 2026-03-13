@@ -12,54 +12,54 @@ const projects = [
   {
     id: 1,
     title: "Aura Commercial Plaza",
-    category: "Commercial Buildings",
+    category: "Commercial",
     image: "/homepage/gallery/images/gallery-commercial.avif",
-    heightClass: "h-[360px]",
+    heightClass: "lg:h-[360px] aspect-square",
     description:
       "Multi-storey retail and office complex utilizing 6-inch AAC blocks for superior acoustic insulation between suites and a 25% reduction in structural steel.",
   },
   {
     id: 2,
     title: "Verdant Eco-Resort",
-    category: "Hospitality Buildings",
+    category: "Hospitality",
     image: "/homepage/gallery/images/gallery-hospitality.avif",
-    heightClass: "h-[540px]",
+    heightClass: "lg:h-[540px] aspect-square",
     description:
       "High-end resort leveraging the exceptional fire and soundproofing properties of AAC walls for guest safety, privacy, and a GRIHA 5-star rating.",
   },
   {
     id: 3,
     title: "Meridian Low-Cost Housing",
-    category: "Residential / Low Cost",
+    category: "Residential",
     image: "/homepage/gallery/images/gallery-residential.avif",
-    heightClass: "h-[320px]",
+    heightClass: "lg:h-[320px] aspect-square",
     description:
       "A 500-unit residential sector using 4-inch blocks to slash foundation dead load and cut construction-cycle time by over 30%.",
   },
   {
     id: 4,
     title: "Apex Industrial Park",
-    category: "Industrial Buildings",
+    category: "Industrial",
     image: "/homepage/gallery/images/gallery-industrial.avif",
-    heightClass: "h-[460px]",
+    heightClass: "lg:h-[460px] aspect-square",
     description:
       "Warehouse construction using 9-inch AAC blocks for maximum thermal insulation, 4-hour fire ratings, and zero-maintenance exterior walls.",
   },
   {
     id: 5,
     title: "Oakbridge International School",
-    category: "Educational Buildings",
+    category: "Educational",
     image: "/homepage/gallery/images/gallery-education.avif",
-    heightClass: "h-[400px]",
+    heightClass: "lg:h-[400px] aspect-square",
     description:
       "State-of-the-art campus built entirely with lightweight AAC blocks, lowering the building carbon footprint and meeting LEED certification criteria.",
   },
   {
     id: 6,
     title: "Medisurge Hospital Complex",
-    category: "Healthcare Buildings",
+    category: "Healthcare",
     image: "/homepage/gallery/images/gallery-healthcare.avif",
-    heightClass: "h-[480px]",
+    heightClass: "lg:h-[480px] aspect-square",
     description:
       "A multi-wing hospital built with AAC blocks for infection control, rapid construction, and 4-hour fire-rated walls. All patient rooms feature high acoustic insulation and zero asbestos.",
   },
@@ -129,7 +129,7 @@ export default function ProjectGallery({
           >
             {/* Image / placeholder */}
             <div
-              className={`relative w-full ${project.heightClass} bg-slate-200 overflow-hidden`}
+              className={`relative w-full aspect-square lg:aspect-auto ${project.heightClass} bg-slate-200 overflow-hidden`}
             >
               <Image
                 src={project.image}
@@ -140,7 +140,7 @@ export default function ProjectGallery({
               />
 
               {/* Category badge — always visible */}
-              <span className="absolute top-5 left-5 bg-white/90 text-slate-700 text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+              <span className="absolute top-5 right-5 bg-white/90 text-slate-700 text-[10px] md:text-xs font-black uppercase tracking-widest px-2.5 md:px-3 py-1 md:py-1.5 rounded-full shadow-sm">
                 {project.category}
               </span>
             </div>

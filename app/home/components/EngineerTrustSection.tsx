@@ -68,7 +68,7 @@ export default function EngineerTrustSection({ whatsappBase }: Props) {
             href={whatsappBase}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 bg-slate-900 text-white font-bold py-4 px-10 rounded-full text-base hover:bg-slate-800 transition-all"
+            className="inline-flex items-center gap-3 bg-blue-600 text-white font-bold py-4 px-10 rounded-full text-base hover:bg-blue-700 transition-all"
           >
             <MessageSquare size={20} />
             Request Technical Sheet

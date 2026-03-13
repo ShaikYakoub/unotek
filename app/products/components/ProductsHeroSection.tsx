@@ -5,37 +5,31 @@ import { PackageSearch } from "lucide-react";
 
 export default function ProductsHeroSection() {
   return (
-    <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-white px-6 md:px-12 text-center">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-35 z-0"
-        style={{ minHeight: "100%", minWidth: "100%" }}
-      >
-        <source
-          src="/technical/videos/aac-honeycomb-microscopic.webm"
-          type="video/webm"
+    <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6 md:px-12 text-center">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/products/images/hero.avif"
+          alt="Products Hero"
+          className="w-full h-full object-cover"
         />
-      </video>
+        <div className="absolute inset-0 bg-slate-900/60" />
+      </div>
       <div className="relative z-20 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="py-20"
+          className="py-10 px-6 md:px-10"
         >
-          <span className="text-blue-700 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
-            <PackageSearch size={18} /> Product Range
+          <span className="text-blue-100 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
+            Engineered Solutions
           </span>
-          <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
-            AAC Products for
-            <span className="text-blue-600"> Every Build.</span>
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">
+            <span className="text-blue-400">BLOCKS</span> FOR EVERY PROJECT
           </h1>
-          <p className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto font-light leading-relaxed">
-            Explore UNOTEK block sizes, yields, and project-fit recommendations
-            for residential, commercial, and industrial applications.
+          <p className="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto font-light leading-relaxed">
+            Discover a full range of AAC block sizes and specifications designed
+            for high-rise, residential, commercial, and industrial construction.
           </p>
         </motion.div>
       </div>

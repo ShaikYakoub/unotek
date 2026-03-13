@@ -1,36 +1,25 @@
-import Image from "next/image";
-
 type Props = {
   whatsappNumber: string;
 };
 
 export default function AboutCtaSection({ whatsappNumber }: Props) {
   return (
-    <section className="relative py-24 flex flex-col items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 w-full h-full object-cover z-0">
-        <Image
-          src="/about/images/cta-bg.avif"
-          alt="About Us CTA Background"
-          fill
-          className="object-cover opacity-30"
-          sizes="100vw"
-        />
-      </div>
-      <div className="relative z-10 max-w-2xl mx-auto px-6 py-12">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
-          Ready to Build the Future?
+    <section className="py-24 px-8 md:px-24 bg-white">
+      <div className="max-w-7xl mx-auto rounded-[2rem] border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-blue-100 p-8 md:p-12 text-center shadow-[0_20px_80px_rgba(37,99,235,0.15)]">
+        <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
+          Build The Next Landmark With Us.
         </h2>
-        <p className="text-xl md:text-2xl text-slate-700 mb-8 font-light leading-relaxed">
-          Join us in redefining sustainable performance. Connect with our team
-          to explore partnership, investment, or career opportunities at UNOTEK.
+        <p className="text-xl md:text-2xl text-blue-800 mb-8 font-light leading-relaxed">
+          Partner with the Unotek team for sourcing strategy, technical
+          alignment, and reliable execution support from day one.
         </p>
         <a
           href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20am%20interested%20in%20UNOTEK.`}
           target="_blank"
           rel="noreferrer"
-          className="inline-block border-2 border-slate-900 text-slate-900 font-bold py-3 px-6 md:py-4 md:px-8 rounded-full hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg"
+          className="inline-block bg-blue-700 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full hover:bg-blue-800 transition-all duration-300 shadow-[0_12px_30px_rgba(30,64,175,0.35)]"
         >
-          Contact Us on WhatsApp
+          Start Partnership Chat
         </a>
       </div>
     </section>

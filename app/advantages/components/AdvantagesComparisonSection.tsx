@@ -41,6 +41,14 @@ export default function AdvantagesComparisonSection() {
                 66% Lighter
               </div>
             </div>
+            <h3 className="text-3xl font-black text-slate-900 mb-4">
+              Structural Dead-Load Relief.
+            </h3>
+            <p className="text-lg text-slate-600 font-light mb-6">
+              UNOTEK AAC drastically lowers dead load compared to conventional
+              clay bricks, enabling leaner structural systems and better seismic
+              response in multi-storey construction.
+            </p>
           </motion.div>
 
           <motion.div
@@ -102,7 +110,9 @@ export default function AdvantagesComparisonSection() {
               dimensions, builders minimize the time required to adjust them.
             </p>
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm inline-block">
-              <p className="text-4xl font-black text-blue-600 mb-1">35%</p>
+              <p className="text-3xl md:text-4xl font-black text-blue-600 mb-1">
+                35%
+              </p>
               <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">
                 Reduction in plastering & labour cost
               </p>

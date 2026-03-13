@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 type Props = {
@@ -7,19 +6,12 @@ type Props = {
 
 export default function ManufacturingCtaSection({ whatsappNumber }: Props) {
   return (
-    <section className="relative py-24 px-6 md:px-12 border-t border-slate-100 text-center overflow-hidden">
-      <Image
-        src="/manufacturing/images/cta-bg.avif"
-        alt="AAC blocks background"
-        fill
-        className="object-cover z-0 opacity-35"
-        sizes="100vw"
-      />
-      <div className="relative z-20 max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-8">
+    <section className="py-24 px-8 md:px-24 border-t border-slate-100 bg-white text-center">
+      <div className="max-w-7xl mx-auto rounded-[2rem] border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-blue-100 p-8 md:p-12 shadow-[0_20px_80px_rgba(37,99,235,0.12)]">
+        <h2 className="text-3xl md:text-4xl font-black text-blue-900 mb-8">
           Ready to Procure Enterprise-Grade Blocks?
         </h2>
-        <p className="text-xl text-slate-700 mb-10 font-light">
+        <p className="text-xl text-blue-800 mb-10 font-light">
           Our 10-step precision manufacturing guarantees absolute consistency
           across bulk orders.
         </p>
@@ -27,10 +19,10 @@ export default function ManufacturingCtaSection({ whatsappNumber }: Props) {
           href={`https://wa.me/${whatsappNumber}?text=Hello,%20I%20have%20reviewed%20your%2010-step%20manufacturing%20process%20and%20would%20like%20to%20discuss%20a%20bulk%20order.`}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-3 bg-slate-900 text-white font-bold py-3 px-6 md:py-5 md:px-10 rounded-full text-base md:text-lg shadow-[0_0_40px_rgba(15,23,42,0.25)] hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1"
+          className="inline-flex items-center gap-3 bg-blue-700 text-white font-bold py-3 px-8 md:py-5 md:px-12 rounded-full text-base md:text-lg shadow-[0_12px_30px_rgba(30,64,175,0.35)] hover:bg-blue-800 transition-all duration-300 transform hover:-translate-y-1"
         >
           <CheckCircle2 size={22} />
-          Initialize Order via WhatsApp
+          Request Bulk Dispatch Plan
         </a>
       </div>
     </section>

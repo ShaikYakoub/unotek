@@ -8,7 +8,8 @@ import {
   animate,
   useInView,
 } from "framer-motion";
-import { Send, Thermometer, BarChart3, Scale, Zap, Leaf } from "lucide-react";
+import { Send, Thermometer, BarChart3, Leaf } from "lucide-react";
+import AdvancedImpactCardsSection from "@/app/home/components/AdvancedImpactCardsSection";
 
 // ─── Animated Counter ─────────────────────────────────────────────────────── //
 function AnimatedNumber({
@@ -72,15 +73,21 @@ const BLOCK_YIELD_PER_M3: Record<BlockSizeKey, number> = {
   "9 Inch": 36,
 };
 
+const BLOCK_LABELS: Record<BlockSizeKey, string> = {
+  "4 Inch": '4"',
+  "6 Inch": '6"',
+  "9 Inch": '9"',
+};
+
 const ESG = [
-  { label: "CO₂ Avoided (kg)", icon: Leaf, getValue: (v: number) => v * 35 },
+  { label: "CO2 Avoided (kg)", icon: Leaf, getValue: (v: number) => v * 35 },
   {
     label: "Fly Ash Consumed (kg)",
     icon: BarChart3,
     getValue: (v: number) => v * 450,
   },
   {
-    label: "Top-soil Saved (m²)",
+    label: "Top-soil Saved (m2)",
     icon: Thermometer,
     getValue: (v: number) => Math.round(v * 2.1),
   },
@@ -95,9 +102,6 @@ export default function AdvancedEstimationEngine({
   const [volume, setVolume] = useState<number>(100);
   const [grade, setGrade] = useState<GradeKey>("Grade 1");
   const [blockSize, setBlockSize] = useState<BlockSizeKey>("6 Inch");
-  const [activeTab, setActiveTab] = useState<"structural" | "esg">(
-    "structural",
-  );
 
   const spec = GRADES[grade];
   const bricksReplaced = volume * 590;
@@ -132,78 +136,106 @@ export default function AdvancedEstimationEngine({
         transition={{ duration: 0.9, delay: 0.1 }}
         className="bg-white rounded-3xl shadow-enterprise-lg border border-slate-100 p-8 md:p-16"
       >
+        {/* Dynamic brick replacement */}
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mb-12">
+          <div className="border-l-2 border-blue-200 bg-blue-50/40 rounded-r-2xl pl-6 py-5">
+            <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">
+              Red Clay Bricks
+            </p>
+            <p className="text-4xl font-black text-blue-700">
+              <AnimatedNumber value={bricksReplaced} />
+            </p>
+            <p className="text-sm text-blue-500/80 mt-1">
+              1 m³ = 590 clay bricks
+            </p>
+          </div>
+          <div className="border-r-2 border-slate-300 bg-slate-100 rounded-l-2xl pl-6 py-5">
+            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">
+              AAC Blocks ({BLOCK_LABELS[blockSize]})
+            </p>
+            <p className="text-4xl font-black text-slate-900">
+              <AnimatedNumber value={blocksRequired} />
+            </p>
+            <p className="text-sm text-slate-500/90 mt-1">
+              1 m³ = {BLOCK_YIELD_PER_M3[blockSize]} AAC blocks
+            </p>
+          </div>
+        </div>
+
         {/* ── Controls ────────────────────────────────────────────────────── */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 mb-14 pb-12 border-b border-slate-100">
+        <div className="mb-14 pb-12 border-b border-slate-100 space-y-10">
           {/* Volume slider */}
-          <div className="w-full lg:w-1/2">
-            <div className="flex justify-between items-end mb-4">
-              <label className="text-sm font-bold text-slate-400 uppercase tracking-widest">
-                Required Volume
-              </label>
-              <div>
-                <span className="text-4xl font-black text-blue-600 tabular-nums">
-                  {volume}
-                </span>
-                <span className="text-base text-slate-400 ml-1">m³</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div className="w-full lg:col-span-8">
+              <div className="flex justify-between items-end mb-4">
+                <label className="text-sm font-bold text-slate-400 uppercase tracking-widest">
+                  Required Volume
+                </label>
+                <div>
+                  <span className="text-4xl font-black text-blue-600 tabular-nums">
+                    {volume}
+                  </span>
+                  <span className="text-base text-slate-400 ml-1">m³</span>
+                </div>
+              </div>
+              <input
+                type="range"
+                min="10"
+                max="1000"
+                step="10"
+                value={volume}
+                onChange={(e) => setVolume(parseInt(e.target.value))}
+                className="w-full"
+                aria-label="Project volume in cubic metres"
+              />
+              <div className="flex justify-between mt-1.5 text-xs text-slate-400 font-medium">
+                <span>10 m³</span>
+                <span>500 m³</span>
+                <span>1,000 m³</span>
               </div>
             </div>
-            <input
-              type="range"
-              min="10"
-              max="1000"
-              step="10"
-              value={volume}
-              onChange={(e) => setVolume(parseInt(e.target.value))}
-              className="w-full"
-              aria-label="Project volume in cubic metres"
-            />
-            <div className="flex justify-between mt-1.5 text-xs text-slate-400 font-medium">
-              <span>10 m³</span>
-              <span>500 m³</span>
-              <span>1,000 m³</span>
-            </div>
-          </div>
 
-          <div className="w-full lg:w-[30%]">
-            <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block mb-4">
-              Block Size
-            </label>
-            <div className="flex bg-slate-100 p-1.5 rounded-xl">
-              {(Object.keys(BLOCK_YIELD_PER_M3) as BlockSizeKey[]).map(
-                (size) => (
-                  <button
-                    key={size}
-                    onClick={() => setBlockSize(size)}
-                    className={`flex-1 py-3 px-3 rounded-lg font-bold transition-all text-sm ${
-                      blockSize === size
-                        ? "bg-white text-slate-900 shadow-sm"
-                        : "text-slate-500 hover:text-slate-700"
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ),
-              )}
+            <div className="w-full lg:col-span-4">
+              <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block mb-4">
+                Block Size
+              </label>
+              <div className="flex bg-blue-50 p-1.5 rounded-xl border border-blue-100">
+                {(Object.keys(BLOCK_YIELD_PER_M3) as BlockSizeKey[]).map(
+                  (size) => (
+                    <button
+                      key={size}
+                      onClick={() => setBlockSize(size)}
+                      className={`flex-1 py-3 px-3 rounded-lg font-bold transition-all text-sm ${
+                        blockSize === size
+                          ? "bg-blue-600 text-white shadow-sm"
+                          : "text-blue-700 hover:text-blue-800"
+                      }`}
+                    >
+                      {BLOCK_LABELS[size]}
+                    </button>
+                  ),
+                )}
+              </div>
+              <p className="mt-2 text-xs text-slate-400">
+                Yield basis: {BLOCK_YIELD_PER_M3[blockSize]} blocks / m³
+              </p>
             </div>
-            <p className="mt-2 text-xs text-slate-400">
-              Yield basis: {BLOCK_YIELD_PER_M3[blockSize]} blocks / m³
-            </p>
           </div>
 
           {/* Grade toggle */}
-          <div className="w-full lg:w-[38%]">
+          <div className="w-full">
             <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block mb-4">
               Compressive Strength Grade
             </label>
-            <div className="flex bg-slate-100 p-1.5 rounded-xl">
+            <div className="flex bg-blue-50 p-1.5 rounded-xl border border-blue-100 w-full">
               {(Object.keys(GRADES) as GradeKey[]).map((g) => (
                 <button
                   key={g}
                   onClick={() => setGrade(g)}
-                  className={`flex-1 py-3 px-4 rounded-lg font-bold transition-all text-sm ${
+                  className={`flex-1 py-3 px-4 rounded-lg font-bold transition-all text-sm md:text-base ${
                     grade === g
-                      ? "bg-white text-slate-900 shadow-sm"
-                      : "text-slate-500 hover:text-slate-700"
+                      ? "bg-blue-600 text-white shadow-sm"
+                      : "text-blue-700 hover:text-blue-800"
                   }`}
                 >
                   {g} &nbsp;
@@ -225,195 +257,46 @@ export default function AdvancedEstimationEngine({
             </div>
             <p className="mt-1.5 text-xs text-slate-400 italic">{spec.use}</p>
           </div>
-        </div>
 
-        {/* ── Tab switcher ─────────────────────────────────────────────────── */}
-        <div className="flex gap-2 mb-10 p-1 bg-slate-100 rounded-xl w-fit">
-          {(["structural", "esg"] as const).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all ${
-                activeTab === tab
-                  ? "bg-white text-slate-900 shadow-sm"
-                  : "text-slate-500 hover:text-slate-700"
-              }`}
-            >
-              {tab === "structural" ? "Structural ROI" : "ESG Impact"}
-            </button>
-          ))}
-        </div>
-
-        {/* ── Animated structural counters ─────────────────────────────────── */}
-        {activeTab === "structural" && (
-          <motion.div
-            key="structural"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.3 }}
+          <a
+            href={`${whatsappLink}%20Please%20send%20me%20the%20${grade}%20specifications%20for%20a%20${volume}m3%20project.`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-7 rounded-full text-sm transition-colors"
           >
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {[
-                {
-                  icon: Scale,
-                  label: "Lighter Material",
-                  value: 66,
-                  suffix: "%",
-                  color: "text-slate-900",
-                },
-                {
-                  icon: BarChart3,
-                  label: "Foundation Load Cut",
-                  value: 25,
-                  suffix: "%",
-                  color: "text-slate-900",
-                },
-                {
-                  icon: Zap,
-                  label: "Steel Savings",
-                  value: 15,
-                  suffix: "%",
-                  color: "text-slate-900",
-                },
-                {
-                  icon: Leaf,
-                  label: "Labour & Plastering",
-                  value: 35,
-                  suffix: "%",
-                  color: "text-blue-600",
-                },
-              ].map(({ icon: Icon, label, value, suffix, color }) => (
-                <div
-                  key={label}
-                  className="border-l-2 border-slate-200 pl-5 py-1"
-                >
-                  <Icon size={16} className="text-slate-400 mb-3" />
-                  <p className={`text-5xl font-black mb-2 ${color}`}>
-                    <AnimatedNumber value={value} suffix={suffix} />
+            Send Specs <Send size={15} />
+          </a>
+
+          <div className="bg-slate-900 text-white rounded-2xl p-8">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase text-green-400 mb-6">
+              ESG Impact
+            </p>
+            <p className="text-sm text-slate-400 mb-6">
+              Environmental Offset - {volume} m³ Project
+            </p>
+            <div className="grid grid-cols-1 xs:grid-cols-3 gap-8 mb-8">
+              {ESG.map(({ label, icon: Icon, getValue }) => (
+                <div key={label}>
+                  <Icon size={18} className="text-green-400 mb-3" />
+                  <p className="text-4xl font-black text-white mb-1">
+                    <AnimatedNumber value={getValue(volume)} />
                   </p>
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                    {label}
-                  </p>
+                  <p className="text-sm text-slate-400 font-medium">{label}</p>
                 </div>
               ))}
             </div>
-
-            {/* Dynamic brick replacement */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              <div className="border-l-2 border-blue-200 bg-blue-50/40 rounded-r-2xl pl-6 py-5">
-                <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">
-                  Red Clay Bricks Eliminated for {volume} m³
-                </p>
-                <p className="text-4xl font-black text-blue-700">
-                  <AnimatedNumber value={bricksReplaced} />
-                </p>
-                <p className="text-sm text-blue-500/80 mt-1">
-                  1 m³ = 590 clay bricks
-                </p>
-              </div>
-              <div className="border-l-2 border-slate-300 bg-slate-100 rounded-r-2xl pl-6 py-5">
-                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">
-                  AAC Blocks Required ({blockSize})
-                </p>
-                <p className="text-4xl font-black text-slate-900">
-                  <AnimatedNumber value={blocksRequired} />
-                </p>
-                <p className="text-sm text-slate-500/90 mt-1">
-                  Based on selected block data
-                </p>
-              </div>
-            </div>
-
-            {/* HVAC box */}
-            <div className="bg-slate-900 text-white rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="max-w-2xl">
-                <div className="flex items-center gap-2 mb-3">
-                  <Thermometer size={18} className="text-blue-400" />
-                  <h4 className="text-lg font-bold">
-                    HVAC Optimisation Analytics
-                  </h4>
-                </div>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  With a thermal conductivity of{" "}
-                  <strong className="text-white">{spec.thermal}</strong>, your{" "}
-                  <strong className="text-white">{volume} m³</strong> project
-                  typically enables a{" "}
-                  <strong className="text-blue-400">20–30% reduction</strong> in
-                  required HVAC tonnage — lowering both capital expenditure and
-                  lifetime operational costs.
-                </p>
-              </div>
-              <a
-                href={`${whatsappLink}%20Please%20send%20me%20the%20${grade}%20specifications%20for%20a%20${volume}m3%20project.`}
-                target="_blank"
-                rel="noreferrer"
-                className="whitespace-nowrap flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-7 rounded-full text-sm transition-colors flex items-center gap-2"
-              >
-                Send Spec to WhatsApp <Send size={15} />
-              </a>
-            </div>
-          </motion.div>
-        )}
-
-        {/* ── ESG Panel ────────────────────────────────────────────────────── */}
-        {activeTab === "esg" && (
-          <motion.div
-            key="esg"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="bg-slate-900 text-white rounded-2xl p-8 mb-8">
-              <p className="text-xs font-bold tracking-[0.3em] uppercase text-green-400 mb-6">
-                Environmental Offset — {volume} m³ Project
-              </p>
-              <div className="grid grid-cols-1 xs:grid-cols-3 gap-8">
-                {ESG.map(({ label, icon: Icon, getValue }) => (
-                  <div key={label}>
-                    <Icon size={18} className="text-green-400 mb-3" />
-                    <p className="text-4xl font-black text-white mb-1">
-                      <AnimatedNumber value={getValue(volume)} />
-                    </p>
-                    <p className="text-sm text-slate-400 font-medium">
-                      {label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
             <p className="text-sm text-slate-400 font-light leading-relaxed max-w-3xl">
-              India produces{" "}
-              <strong className="text-slate-600">60 million tonnes</strong> of
-              fly ash annually; only 5% is currently consumed across all
-              sectors. By specifying Unotek AAC, your project directly converts
-              industrial liability into certified structural material —
-              qualifying for{" "}
-              <strong className="text-slate-600">GRIHA and LEED</strong> green
-              building credits.
+              India produces 60 million tonnes of fly ash annually; only 5% is
+              currently consumed across all sectors. By specifying Unotek AAC,
+              your project directly converts industrial liability into certified
+              structural material, qualifying for GRIHA and LEED green building
+              credits.
             </p>
-          </motion.div>
-        )}
-
-        {/* ── CTA ──────────────────────────────────────────────────────────── */}
-        <div className="flex flex-col items-center gap-4 mt-12">
-          <motion.a
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            href={`${whatsappLink}%20I%20need%20${grade}%20blocks%20for%20a%20volume%20of%20${volume}%20cubic%20meters.`}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-12 rounded-full text-lg transition-colors shadow-xl shadow-blue-600/20"
-          >
-            Request Quotation for {volume} m³ <Send size={20} />
-          </motion.a>
-          <p className="text-xs text-slate-400">
-            Response within 2 business hours · No spam, just engineered
-            solutions
-          </p>
+          </div>
         </div>
       </motion.div>
+
+      <AdvancedImpactCardsSection volume={volume} thermal={spec.thermal} />
     </div>
   );
 }

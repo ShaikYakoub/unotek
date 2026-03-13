@@ -44,9 +44,10 @@ export default function HomeHeroSection({
           alt="Homepage Hero Background"
           fill
           priority
-          className="object-cover object-center brightness-50"
+          className="object-cover object-center"
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-slate-900/60" />
       </motion.div>
 
       <motion.div
@@ -88,7 +89,7 @@ export default function HomeHeroSection({
             href={whatsappBase}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-slate-900 font-bold py-3 px-6 md:py-4 md:px-10 rounded-full text-base md:text-lg hover:bg-blue-50 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+            className="inline-flex items-center gap-3 bg-blue-600 text-white font-bold py-3 px-6 md:py-4 md:px-10 rounded-full text-base md:text-lg hover:bg-blue-700 transition-all shadow-[0_0_40px_rgba(37,99,235,0.3)]"
           >
             <MessageSquare size={22} />
             Connect with Engineering

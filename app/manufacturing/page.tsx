@@ -76,17 +76,23 @@ export default function PremiumProcessPage() {
   const stepMedia: Record<number, { type: string; src: string }> = {
     1: {
       type: "video",
-      src: "/homepage/videos/fly-ash-slurry-and-lime-blending.webm",
+      src: "/manufacturing/videos/coal-fly-ash.webm",
     },
-    2: { type: "video", src: "/manufacturing/videos/slurry-mixing.webm" },
-    3: { type: "video", src: "/homepage/videos/mold-filling-with-slurry.webm" },
-    4: { type: "video", src: "/manufacturing/videos/factory-overview.webm" },
-    5: { type: "video", src: "/manufacturing/videos/slurry-mixing.webm" },
-    6: { type: "video", src: "/homepage/videos/drone-shot-of-warehouse.webm" },
-    7: { type: "video", src: "/homepage/videos/mold-filling-with-slurry.webm" },
-    8: { type: "video", src: "/manufacturing/videos/block-grouping.webm" },
+    2: { type: "image", src: "/manufacturing/images/materials-storage.avif" },
+    3: {
+      type: "image",
+      src: "/manufacturing/images/gypsum.avif",
+    },
+    4: {
+      type: "image",
+      src: "/manufacturing/images/material-preparation.avif",
+    },
+    5: { type: "image", src: "/manufacturing/images/aluminum-mixing.avif" },
+    6: { type: "image", src: "/manufacturing/images/waste-recycling.avif" },
+    7: { type: "video", src: "/manufacturing/videos/slurry-mixing.webm" },
+    8: { type: "video", src: "/manufacturing/videos/wire-cutting.webm" },
     9: { type: "video", src: "/manufacturing/videos/autoclave-curing.webm" },
-    10: { type: "video", src: "/homepage/videos/aac-cake-cutting.webm" },
+    10: { type: "image", src: "/manufacturing/images/blocks-yard.avif" },
   };
 
   return (
@@ -99,7 +105,7 @@ export default function PremiumProcessPage() {
           Process Workflow Cards
         </h2>
         <p className="text-slate-500 font-light">
-          Each stage is shown with its own media clip and process summary.
+          Each stage is shown with its matching visual and process summary.
         </p>
       </div>
 
